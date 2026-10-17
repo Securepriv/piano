@@ -1,0 +1,1466 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Les Notes de Piano — Apprendre le Piano</title>
+  <meta name="description" content="Apprenez les notes de piano, le clavier et la position des mains grâce à des visuels clairs et élégants.">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- ══════════════ EN-TÊTE ══════════════ -->
+  <header class="entete">
+    <nav class="nav">
+      <a class="nav__logo" href="#accueil">
+        <span class="nav__note">♪</span> Piano <em>Studio</em>
+      </a>
+      <ul class="nav__liens">
+        <li><a href="#clavier">Le clavier</a></li>
+        <li><a href="#notes">Les notes</a></li>
+        <li><a href="#tableau-notes">Table des 12</a></li>
+        <li><a href="#mains">Position des mains</a></li>
+        <li><a href="#accords">Accords</a></li>
+        <li><a href="#gammes">Les gammes</a></li>
+        <li><a href="#entrainement">S’entraîner</a></li>
+        <li><a href="#hira">Hira</a></li>
+        <li><a href="#conseils">Conseils</a></li>
+      </ul>
+      <a class="nav__bouton" href="#clavier">Commencer</a>
+    </nav>
+
+    <section class="hero" id="accueil">
+      <div class="hero__fond" role="img" aria-label="Touches de piano en gros plan"></div>
+      <div class="hero__voile"></div>
+      <div class="hero__contenu">
+        <p class="hero__sur-titre">Méthode visuelle · Niveau débutant</p>
+        <h1 class="hero__titre">
+          Apprendre les <em>notes</em><br>de piano<span class="hero__point">.</span>
+        </h1>
+        <p class="hero__texte">
+          Une leçon simple et élégante pour reconnaître les touches,
+          mémoriser les sept notes et placer vos mains avec la bonne posture.
+        </p>
+        <div class="hero__actions">
+          <a class="bouton bouton--or" href="#clavier">Découvrir le clavier</a>
+          <a class="bouton bouton--fantome" href="#mains">Voir les positions de main</a>
+        </div>
+        <dl class="hero__stats">
+          <div><dt>7</dt><dd>notes naturelles</dd></div>
+          <div><dt>5</dt><dd>doigts par main</dd></div>
+          <div><dt>2</dt><dd>octaves illustrées</dd></div>
+        </dl>
+      </div>
+    </section>
+  </header>
+
+  <main>
+
+    <!-- ══════════════ 01 · LE CLAVIER ══════════════ -->
+    <section class="section" id="clavier">
+      <div class="conteneur">
+        <p class="section__num">01 — Le clavier</p>
+        <h2 class="section__titre">Le piano, c’est d’abord un <em>motif</em></h2>
+        <p class="section__intro">
+          Le clavier alterne des groupes de touches noires : <strong>deux</strong>, puis <strong>trois</strong>.
+          Ce motif se répète sans fin. La touche blanche située juste avant chaque groupe
+          de <strong>deux touches noires</strong> est toujours un <strong>Do</strong>.
+        </p>
+
+        <!-- Barre d'outils du clavier -->
+        <div class="piano-outils">
+          <div class="piano-outils__groupe" role="group" aria-label="Affichage des notes">
+            <span class="piano-outils__label">Affichage :</span>
+            <button class="chip chip--actif" data-affichage="complet">Notes + Lettres</button>
+            <button class="chip" data-affichage="notes">Notes seules</button>
+            <button class="chip" data-affichage="lettres">Lettres seules</button>
+            <button class="chip" data-affichage="vide">Sans étiquette</button>
+          </div>
+          <p class="piano-outils__astuce">Cliquez sur une touche pour l’entendre ♪</p>
+        </div>
+
+        <!-- Clavier interactif 2 octaves -->
+        <div class="piano-cadre">
+          <div class="piano" id="piano" data-affichage="complet">
+            <!-- Octave 1 -->
+            <div class="touche touche--blanche" data-note="Do" data-lettre="C" data-freq="261.63"><span class="touche__nom">Do</span><span class="touche__lettre">C</span></div>
+            <div class="touche touche--blanche" data-note="Ré" data-lettre="D" data-freq="293.66"><span class="touche__nom">Ré</span><span class="touche__lettre">D</span></div>
+            <div class="touche touche--blanche" data-note="Mi" data-lettre="E" data-freq="329.63"><span class="touche__nom">Mi</span><span class="touche__lettre">E</span></div>
+            <div class="touche touche--blanche" data-note="Fa" data-lettre="F" data-freq="349.23"><span class="touche__nom">Fa</span><span class="touche__lettre">F</span></div>
+            <div class="touche touche--blanche" data-note="Sol" data-lettre="G" data-freq="392.00"><span class="touche__nom">Sol</span><span class="touche__lettre">G</span></div>
+            <div class="touche touche--blanche" data-note="La" data-lettre="A" data-freq="440.00"><span class="touche__nom">La</span><span class="touche__lettre">A</span></div>
+            <div class="touche touche--blanche" data-note="Si" data-lettre="B" data-freq="493.88"><span class="touche__nom">Si</span><span class="touche__lettre">B</span></div>
+            <!-- Octave 2 -->
+            <div class="touche touche--blanche" data-note="Do" data-lettre="C" data-freq="523.25"><span class="touche__nom">Do</span><span class="touche__lettre">C</span></div>
+            <div class="touche touche--blanche" data-note="Ré" data-lettre="D" data-freq="587.33"><span class="touche__nom">Ré</span><span class="touche__lettre">D</span></div>
+            <div class="touche touche--blanche" data-note="Mi" data-lettre="E" data-freq="659.25"><span class="touche__nom">Mi</span><span class="touche__lettre">E</span></div>
+            <div class="touche touche--blanche" data-note="Fa" data-lettre="F" data-freq="698.46"><span class="touche__nom">Fa</span><span class="touche__lettre">F</span></div>
+            <div class="touche touche--blanche" data-note="Sol" data-lettre="G" data-freq="783.99"><span class="touche__nom">Sol</span><span class="touche__lettre">G</span></div>
+            <div class="touche touche--blanche" data-note="La" data-lettre="A" data-freq="880.00"><span class="touche__nom">La</span><span class="touche__lettre">A</span></div>
+            <div class="touche touche--blanche" data-note="Si" data-lettre="B" data-freq="987.77"><span class="touche__nom">Si</span><span class="touche__lettre">B</span></div>
+
+            <!-- Touches noires — octave 1 -->
+            <div class="touche touche--noire" style="--pos:.62" data-note="Do♯" data-lettre="C#" data-freq="277.18"><span class="touche__nom">Do♯</span></div>
+            <div class="touche touche--noire" style="--pos:1.74" data-note="Ré♯" data-lettre="D#" data-freq="311.13"><span class="touche__nom">Ré♯</span></div>
+            <div class="touche touche--noire" style="--pos:3.62" data-note="Fa♯" data-lettre="F#" data-freq="369.99"><span class="touche__nom">Fa♯</span></div>
+            <div class="touche touche--noire" style="--pos:4.74" data-note="Sol♯" data-lettre="G#" data-freq="415.30"><span class="touche__nom">Sol♯</span></div>
+            <div class="touche touche--noire" style="--pos:5.86" data-note="La♯" data-lettre="A#" data-freq="466.16"><span class="touche__nom">La♯</span></div>
+            <!-- Touches noires — octave 2 -->
+            <div class="touche touche--noire" style="--pos:7.62" data-note="Do♯" data-lettre="C#" data-freq="554.37"><span class="touche__nom">Do♯</span></div>
+            <div class="touche touche--noire" style="--pos:8.74" data-note="Ré♯" data-lettre="D#" data-freq="622.25"><span class="touche__nom">Ré♯</span></div>
+            <div class="touche touche--noire" style="--pos:10.62" data-note="Fa♯" data-lettre="F#" data-freq="739.99"><span class="touche__nom">Fa♯</span></div>
+            <div class="touche touche--noire" style="--pos:11.74" data-note="Sol♯" data-lettre="G#" data-freq="830.61"><span class="touche__nom">Sol♯</span></div>
+            <div class="touche touche--noire" style="--pos:12.86" data-note="La♯" data-lettre="A#" data-freq="932.33"><span class="touche__nom">La♯</span></div>
+          </div>
+          <p class="piano-cadre__repere"><span></span> Chaque groupe de 2 touches noires est précédé d’un <strong>Do</strong></p>
+        </div>
+
+        <div class="astuce">
+          <div class="astuce__icone" aria-hidden="true">2·3</div>
+          <div>
+            <h3 class="astuce__titre">La règle des touches noires</h3>
+            <p>Repérez d’abord les <strong>deux touches noires</strong> : la touche blanche à leur gauche est un <strong>Do</strong>.
+            Ensuite, il suffit de compter : Do, Ré, Mi, Fa, Sol, La, Si… puis on recommence !</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ══════════════ 02 · LES 7 NOTES ══════════════ -->
+    <section class="section section--sombre" id="notes">
+      <div class="conteneur">
+        <p class="section__num">02 — Les sept notes</p>
+        <h2 class="section__titre">Do, Ré, Mi, Fa, Sol, La, <em>Si</em></h2>
+        <p class="section__intro">
+          Le piano utilise sept notes naturelles (touches blanches) et cinq altérations (touches noires).
+          Voici les sept notes, leur place sur le clavier et leur nom international.
+        </p>
+
+        <div class="grille-notes">
+          <article class="carte-note">
+            <div class="carte-note__lettre">C</div>
+            <h3 class="carte-note__nom">Do</h3>
+            <p class="carte-note__rôle">La note de référence</p>
+            <p class="carte-note__desc">Juste avant les <strong>2 touches noires</strong>. Le « Do médian » est au centre du piano.</p>
+            <div class="mini-clavier" aria-hidden="true">
+              <div class="mini-touche blanche est-do on">1</div><div class="mini-touche blanche"></div><div class="mini-touche blanche"></div>
+              <div class="mini-touche blanche"></div><div class="mini-touche blanche"></div><div class="mini-touche blanche"></div><div class="mini-touche blanche"></div>
+              <div class="mini-touche noire" style="--pos:.62"></div><div class="mini-touche noire" style="--pos:1.74"></div>
+              <div class="mini-touche noire" style="--pos:3.62"></div><div class="mini-touche noire" style="--pos:4.74"></div><div class="mini-touche noire" style="--pos:5.86"></div>
+            </div>
+          </article>
+
+          <article class="carte-note">
+            <div class="carte-note__lettre">D</div>
+            <h3 class="carte-note__nom">Ré</h3>
+            <p class="carte-note__rôle">Entre les deux noires</p>
+            <p class="carte-note__desc">Seule touche blanche <strong>entourée</strong> des deux touches noires du premier groupe.</p>
+            <div class="mini-clavier" aria-hidden="true">
+              <div class="mini-touche blanche"></div><div class="mini-touche blanche on">2</div><div class="mini-touche blanche"></div>
+              <div class="mini-touche blanche"></div><div class="mini-touche blanche"></div><div class="mini-touche blanche"></div><div class="mini-touche blanche"></div>
+              <div class="mini-touche noire" style="--pos:.62"></div><div class="mini-touche noire" style="--pos:1.74"></div>
+              <div class="mini-touche noire" style="--pos:3.62"></div><div class="mini-touche noire" style="--pos:4.74"></div><div class="mini-touche noire" style="--pos:5.86"></div>
+            </div>
+          </article>
+
+          <article class="carte-note">
+            <div class="carte-note__lettre">E</div>
+            <h3 class="carte-note__nom">Mi</h3>
+            <p class="carte-note__rôle">Après les deux noires</p>
+            <p class="carte-note__desc">Juste après le groupe de <strong>2 touches noires</strong>, à droite du Ré.</p>
+            <div class="mini-clavier" aria-hidden="true">
+              <div class="mini-touche blanche"></div><div class="mini-touche blanche"></div><div class="mini-touche blanche on">3</div>
+              <div class="mini-touche blanche"></div><div class="mini-touche blanche"></div><div class="mini-touche blanche"></div><div class="mini-touche blanche"></div>
+              <div class="mini-touche noire" style="--pos:.62"></div><div class="mini-touche noire" style="--pos:1.74"></div>
+              <div class="mini-touche noire" style="--pos:3.62"></div><div class="mini-touche noire" style="--pos:4.74"></div><div class="mini-touche noire" style="--pos:5.86"></div>
+            </div>
+          </article>
+
+          <article class="carte-note">
+            <div class="carte-note__lettre">F</div>
+            <h3 class="carte-note__nom">Fa</h3>
+            <p class="carte-note__rôle">Avant les trois noires</p>
+            <p class="carte-note__desc">La touche blanche située juste avant le groupe de <strong>3 touches noires</strong>.</p>
+            <div class="mini-clavier" aria-hidden="true">
+              <div class="mini-touche blanche"></div><div class="mini-touche blanche"></div><div class="mini-touche blanche"></div>
+              <div class="mini-touche blanche on">4</div><div class="mini-touche blanche"></div><div class="mini-touche blanche"></div><div class="mini-touche blanche"></div>
+              <div class="mini-touche noire" style="--pos:.62"></div><div class="mini-touche noire" style="--pos:1.74"></div>
+              <div class="mini-touche noire" style="--pos:3.62"></div><div class="mini-touche noire" style="--pos:4.74"></div><div class="mini-touche noire" style="--pos:5.86"></div>
+            </div>
+          </article>
+
+          <article class="carte-note">
+            <div class="carte-note__lettre">G</div>
+            <h3 class="carte-note__nom">Sol</h3>
+            <p class="carte-note__rôle">Au milieu des trois</p>
+            <p class="carte-note__desc">La touche blanche <strong>encadrée</strong> par les touches noires centrales du groupe de trois.</p>
+            <div class="mini-clavier" aria-hidden="true">
+              <div class="mini-touche blanche"></div><div class="mini-touche blanche"></div><div class="mini-touche blanche"></div>
+              <div class="mini-touche blanche"></div><div class="mini-touche blanche on">5</div><div class="mini-touche blanche"></div><div class="mini-touche blanche"></div>
+              <div class="mini-touche noire" style="--pos:.62"></div><div class="mini-touche noire" style="--pos:1.74"></div>
+              <div class="mini-touche noire" style="--pos:3.62"></div><div class="mini-touche noire" style="--pos:4.74"></div><div class="mini-touche noire" style="--pos:5.86"></div>
+            </div>
+          </article>
+
+          <article class="carte-note">
+            <div class="carte-note__lettre">A</div>
+            <h3 class="carte-note__nom">La</h3>
+            <p class="carte-note__rôle">Entre la 2ᵉ et la 3ᵉ noire</p>
+            <p class="carte-note__desc">Située entre la 2ᵉ et la 3ᵉ touche du groupe de trois. Le La 440 Hz sert de <strong>diapason</strong>.</p>
+            <div class="mini-clavier" aria-hidden="true">
+              <div class="mini-touche blanche"></div><div class="mini-touche blanche"></div><div class="mini-touche blanche"></div>
+              <div class="mini-touche blanche"></div><div class="mini-touche blanche"></div><div class="mini-touche blanche on">6</div><div class="mini-touche blanche"></div>
+              <div class="mini-touche noire" style="--pos:.62"></div><div class="mini-touche noire" style="--pos:1.74"></div>
+              <div class="mini-touche noire" style="--pos:3.62"></div><div class="mini-touche noire" style="--pos:4.74"></div><div class="mini-touche noire" style="--pos:5.86"></div>
+            </div>
+          </article>
+
+          <article class="carte-note">
+            <div class="carte-note__lettre">B</div>
+            <h3 class="carte-note__nom">Si</h3>
+            <p class="carte-note__rôle">Après les trois noires</p>
+            <p class="carte-note__desc">Juste après le groupe de <strong>3 touches noires</strong>. Elle mène au Do suivant.</p>
+            <div class="mini-clavier" aria-hidden="true">
+              <div class="mini-touche blanche"></div><div class="mini-touche blanche"></div><div class="mini-touche blanche"></div>
+              <div class="mini-touche blanche"></div><div class="mini-touche blanche"></div><div class="mini-touche blanche"></div><div class="mini-touche blanche on">7</div>
+              <div class="mini-touche noire" style="--pos:.62"></div><div class="mini-touche noire" style="--pos:1.74"></div>
+              <div class="mini-touche noire" style="--pos:3.62"></div><div class="mini-touche noire" style="--pos:4.74"></div><div class="mini-touche noire" style="--pos:5.86"></div>
+            </div>
+          </article>
+
+          <article class="carte-note carte-note--or">
+            <div class="carte-note__lettre">♯</div>
+            <h3 class="carte-note__nom">Les dièses</h3>
+            <p class="carte-note__rôle">Touches noires</p>
+            <p class="carte-note__desc">Do♯, Ré♯, Fa♯, Sol♯, La♯ : elles portent le nom de la touche blanche à leur gauche, augmenté d’un demi-ton.</p>
+            <div class="mini-clavier" aria-hidden="true">
+              <div class="mini-touche blanche"></div><div class="mini-touche blanche"></div><div class="mini-touche blanche"></div>
+              <div class="mini-touche blanche"></div><div class="mini-touche blanche"></div><div class="mini-touche blanche"></div><div class="mini-touche blanche"></div>
+              <div class="mini-touche noire on" style="--pos:.62"></div><div class="mini-touche noire on" style="--pos:1.74"></div>
+              <div class="mini-touche noire on" style="--pos:3.62"></div><div class="mini-touche noire on" style="--pos:4.74"></div><div class="mini-touche noire on" style="--pos:5.86"></div>
+            </div>
+          </article>
+        </div>
+
+        <!-- ═══ Table de référence des 12 touches ═══ -->
+        <div class="tableau-ref" id="tableau-notes">
+          <h3 class="tableau-ref__titre">Table de référence — les 12 touches de l’octave</h3>
+          <p class="tableau-ref__intro">
+            De Do à Si, un octave compte <strong>12 demi-tons</strong> : 7 touches blanches (notes naturelles)
+            et 5 touches noires. Chaque touche noire possède <strong>deux noms</strong> — un dièse (♯)
+            et un bémol (♭) — utilisés selon le contexte musical.
+          </p>
+          <div class="tableau-ref__legende">
+            <span><b>♯</b>&nbsp;dièse = un demi-ton plus haut</span>
+            <span><b>♭</b>&nbsp;bémol = un demi-ton plus bas</span>
+          </div>
+
+          <div class="tableau-ref__debordement">
+            <table class="tableau">
+              <thead>
+                <tr>
+                  <th>Note</th>
+                  <th>Lettre</th>
+                  <th>Touche</th>
+                  <th>Équivalents</th>
+                  <th>Clavier</th>
+                  <th>Position sur le clavier</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td class="tableau__note">Do</td>
+                  <td class="tableau__lettre">C</td>
+                  <td><span class="pastille-touche pastille-touche--blanche">blanche</span></td>
+                  <td>Si♯ = Do</td>
+                  <td><div class="mini-clavier mini-clavier--tableau" aria-hidden="true"><div class="mini-touche blanche on"></div><div class="mini-touche blanche"></div><div class="mini-touche blanche"></div><div class="mini-touche blanche"></div><div class="mini-touche blanche"></div><div class="mini-touche blanche"></div><div class="mini-touche blanche"></div><div class="mini-touche noire" style="--pos:.62"></div><div class="mini-touche noire" style="--pos:1.74"></div><div class="mini-touche noire" style="--pos:3.62"></div><div class="mini-touche noire" style="--pos:4.74"></div><div class="mini-touche noire" style="--pos:5.86"></div></div></td>
+                  <td>Avant le groupe de 2 touches noires</td>
+                </tr>
+                <tr class="tableau__rangee--alteree">
+                  <td class="tableau__note">Do♯ / Ré♭</td>
+                  <td class="tableau__lettre">C♯ / D♭</td>
+                  <td><span class="pastille-touche pastille-touche--noire">noire</span></td>
+                  <td>Do dièse = Ré bémol</td>
+                  <td><div class="mini-clavier mini-clavier--tableau" aria-hidden="true"><div class="mini-touche blanche"></div><div class="mini-touche blanche"></div><div class="mini-touche blanche"></div><div class="mini-touche blanche"></div><div class="mini-touche blanche"></div><div class="mini-touche blanche"></div><div class="mini-touche blanche"></div><div class="mini-touche noire on" style="--pos:.62"></div><div class="mini-touche noire" style="--pos:1.74"></div><div class="mini-touche noire" style="--pos:3.62"></div><div class="mini-touche noire" style="--pos:4.74"></div><div class="mini-touche noire" style="--pos:5.86"></div></div></td>
+                  <td>1ʳᵉ touche noire du groupe de 2</td>
+                </tr>
+                <tr>
+                  <td class="tableau__note">Ré</td>
+                  <td class="tableau__lettre">D</td>
+                  <td><span class="pastille-touche pastille-touche--blanche">blanche</span></td>
+                  <td>—</td>
+                  <td><div class="mini-clavier mini-clavier--tableau" aria-hidden="true"><div class="mini-touche blanche"></div><div class="mini-touche blanche on"></div><div class="mini-touche blanche"></div><div class="mini-touche blanche"></div><div class="mini-touche blanche"></div><div class="mini-touche blanche"></div><div class="mini-touche blanche"></div><div class="mini-touche noire" style="--pos:.62"></div><div class="mini-touche noire" style="--pos:1.74"></div><div class="mini-touche noire" style="--pos:3.62"></div><div class="mini-touche noire" style="--pos:4.74"></div><div class="mini-touche noire" style="--pos:5.86"></div></div></td>
+                  <td>Entre les 2 touches noires</td>
+                </tr>
+                <tr class="tableau__rangee--alteree">
+                  <td class="tableau__note">Ré♯ / Mi♭</td>
+                  <td class="tableau__lettre">D♯ / E♭</td>
+                  <td><span class="pastille-touche pastille-touche--noire">noire</span></td>
+                  <td>Ré dièse = Mi bémol</td>
+                  <td><div class="mini-clavier mini-clavier--tableau" aria-hidden="true"><div class="mini-touche blanche"></div><div class="mini-touche blanche"></div><div class="mini-touche blanche"></div><div class="mini-touche blanche"></div><div class="mini-touche blanche"></div><div class="mini-touche blanche"></div><div class="mini-touche blanche"></div><div class="mini-touche noire" style="--pos:.62"></div><div class="mini-touche noire on" style="--pos:1.74"></div><div class="mini-touche noire" style="--pos:3.62"></div><div class="mini-touche noire" style="--pos:4.74"></div><div class="mini-touche noire" style="--pos:5.86"></div></div></td>
+                  <td>2ᵉ touche noire du groupe de 2</td>
+                </tr>
+                <tr>
+                  <td class="tableau__note">Mi</td>
+                  <td class="tableau__lettre">E</td>
+                  <td><span class="pastille-touche pastille-touche--blanche">blanche</span></td>
+                  <td>Fa♭ = Mi</td>
+                  <td><div class="mini-clavier mini-clavier--tableau" aria-hidden="true"><div class="mini-touche blanche"></div><div class="mini-touche blanche"></div><div class="mini-touche blanche on"></div><div class="mini-touche blanche"></div><div class="mini-touche blanche"></div><div class="mini-touche blanche"></div><div class="mini-touche blanche"></div><div class="mini-touche noire" style="--pos:.62"></div><div class="mini-touche noire" style="--pos:1.74"></div><div class="mini-touche noire" style="--pos:3.62"></div><div class="mini-touche noire" style="--pos:4.74"></div><div class="mini-touche noire" style="--pos:5.86"></div></div></td>
+                  <td>Après le groupe de 2 touches noires</td>
+                </tr>
+                <tr>
+                  <td class="tableau__note">Fa</td>
+                  <td class="tableau__lettre">F</td>
+                  <td><span class="pastille-touche pastille-touche--blanche">blanche</span></td>
+                  <td>Mi♯ = Fa</td>
+                  <td><div class="mini-clavier mini-clavier--tableau" aria-hidden="true"><div class="mini-touche blanche"></div><div class="mini-touche blanche"></div><div class="mini-touche blanche"></div><div class="mini-touche blanche on"></div><div class="mini-touche blanche"></div><div class="mini-touche blanche"></div><div class="mini-touche blanche"></div><div class="mini-touche noire" style="--pos:.62"></div><div class="mini-touche noire" style="--pos:1.74"></div><div class="mini-touche noire" style="--pos:3.62"></div><div class="mini-touche noire" style="--pos:4.74"></div><div class="mini-touche noire" style="--pos:5.86"></div></div></td>
+                  <td>Avant le groupe de 3 touches noires</td>
+                </tr>
+                <tr class="tableau__rangee--alteree">
+                  <td class="tableau__note">Fa♯ / Sol♭</td>
+                  <td class="tableau__lettre">F♯ / G♭</td>
+                  <td><span class="pastille-touche pastille-touche--noire">noire</span></td>
+                  <td>Fa dièse = Sol bémol</td>
+                  <td><div class="mini-clavier mini-clavier--tableau" aria-hidden="true"><div class="mini-touche blanche"></div><div class="mini-touche blanche"></div><div class="mini-touche blanche"></div><div class="mini-touche blanche"></div><div class="mini-touche blanche"></div><div class="mini-touche blanche"></div><div class="mini-touche blanche"></div><div class="mini-touche noire" style="--pos:.62"></div><div class="mini-touche noire" style="--pos:1.74"></div><div class="mini-touche noire on" style="--pos:3.62"></div><div class="mini-touche noire" style="--pos:4.74"></div><div class="mini-touche noire" style="--pos:5.86"></div></div></td>
+                  <td>1ʳᵉ touche noire du groupe de 3</td>
+                </tr>
+                <tr>
+                  <td class="tableau__note">Sol</td>
+                  <td class="tableau__lettre">G</td>
+                  <td><span class="pastille-touche pastille-touche--blanche">blanche</span></td>
+                  <td>—</td>
+                  <td><div class="mini-clavier mini-clavier--tableau" aria-hidden="true"><div class="mini-touche blanche"></div><div class="mini-touche blanche"></div><div class="mini-touche blanche"></div><div class="mini-touche blanche"></div><div class="mini-touche blanche on"></div><div class="mini-touche blanche"></div><div class="mini-touche blanche"></div><div class="mini-touche noire" style="--pos:.62"></div><div class="mini-touche noire" style="--pos:1.74"></div><div class="mini-touche noire" style="--pos:3.62"></div><div class="mini-touche noire" style="--pos:4.74"></div><div class="mini-touche noire" style="--pos:5.86"></div></div></td>
+                  <td>Entre la 1ʳᵉ et la 2ᵉ touche noire</td>
+                </tr>
+                <tr class="tableau__rangee--alteree">
+                  <td class="tableau__note">Sol♯ / La♭</td>
+                  <td class="tableau__lettre">G♯ / A♭</td>
+                  <td><span class="pastille-touche pastille-touche--noire">noire</span></td>
+                  <td>Sol dièse = La bémol</td>
+                  <td><div class="mini-clavier mini-clavier--tableau" aria-hidden="true"><div class="mini-touche blanche"></div><div class="mini-touche blanche"></div><div class="mini-touche blanche"></div><div class="mini-touche blanche"></div><div class="mini-touche blanche"></div><div class="mini-touche blanche"></div><div class="mini-touche blanche"></div><div class="mini-touche noire" style="--pos:.62"></div><div class="mini-touche noire" style="--pos:1.74"></div><div class="mini-touche noire" style="--pos:3.62"></div><div class="mini-touche noire on" style="--pos:4.74"></div><div class="mini-touche noire" style="--pos:5.86"></div></div></td>
+                  <td>2ᵉ touche noire du groupe de 3</td>
+                </tr>
+                <tr>
+                  <td class="tableau__note">La</td>
+                  <td class="tableau__lettre">A</td>
+                  <td><span class="pastille-touche pastille-touche--blanche">blanche</span></td>
+                  <td>—</td>
+                  <td><div class="mini-clavier mini-clavier--tableau" aria-hidden="true"><div class="mini-touche blanche"></div><div class="mini-touche blanche"></div><div class="mini-touche blanche"></div><div class="mini-touche blanche"></div><div class="mini-touche blanche"></div><div class="mini-touche blanche on"></div><div class="mini-touche blanche"></div><div class="mini-touche noire" style="--pos:.62"></div><div class="mini-touche noire" style="--pos:1.74"></div><div class="mini-touche noire" style="--pos:3.62"></div><div class="mini-touche noire" style="--pos:4.74"></div><div class="mini-touche noire" style="--pos:5.86"></div></div></td>
+                  <td>Entre la 2ᵉ et la 3ᵉ touche noire</td>
+                </tr>
+                <tr class="tableau__rangee--alteree">
+                  <td class="tableau__note">La♯ / Si♭</td>
+                  <td class="tableau__lettre">A♯ / B♭</td>
+                  <td><span class="pastille-touche pastille-touche--noire">noire</span></td>
+                  <td>La dièse = Si bémol</td>
+                  <td><div class="mini-clavier mini-clavier--tableau" aria-hidden="true"><div class="mini-touche blanche"></div><div class="mini-touche blanche"></div><div class="mini-touche blanche"></div><div class="mini-touche blanche"></div><div class="mini-touche blanche"></div><div class="mini-touche blanche"></div><div class="mini-touche blanche"></div><div class="mini-touche noire" style="--pos:.62"></div><div class="mini-touche noire" style="--pos:1.74"></div><div class="mini-touche noire" style="--pos:3.62"></div><div class="mini-touche noire" style="--pos:4.74"></div><div class="mini-touche noire on" style="--pos:5.86"></div></div></td>
+                  <td>3ᵉ touche noire du groupe de 3</td>
+                </tr>
+                <tr>
+                  <td class="tableau__note">Si</td>
+                  <td class="tableau__lettre">B</td>
+                  <td><span class="pastille-touche pastille-touche--blanche">blanche</span></td>
+                  <td>Do♭ = Si</td>
+                  <td><div class="mini-clavier mini-clavier--tableau" aria-hidden="true"><div class="mini-touche blanche"></div><div class="mini-touche blanche"></div><div class="mini-touche blanche"></div><div class="mini-touche blanche"></div><div class="mini-touche blanche"></div><div class="mini-touche blanche"></div><div class="mini-touche blanche on"></div><div class="mini-touche noire" style="--pos:.62"></div><div class="mini-touche noire" style="--pos:1.74"></div><div class="mini-touche noire" style="--pos:3.62"></div><div class="mini-touche noire" style="--pos:4.74"></div><div class="mini-touche noire" style="--pos:5.86"></div></div></td>
+                  <td>Après le groupe de 3 touches noires</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <div class="demi-tons">
+            <div class="demi-tons__icone" aria-hidden="true">½</div>
+            <div>
+              <h4>Pourquoi seulement 5 touches noires ?</h4>
+              <p>
+                Entre <strong>Mi</strong> et <strong>Fa</strong>, puis entre <strong>Si</strong> et <strong>Do</strong>,
+                il n’existe aucune touche noire : ces deux paires sont déjà séparées d’un seul demi-ton.
+                On parle de <strong>demi-ton naturel</strong>. Partout ailleurs, une touche noire (dièse / bémol)
+                s’intercale et les notes sont distantes d’un ton entier.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ══════════════ 03 · POSITION DES MAINS ══════════════ -->
+    <section class="section" id="mains">
+      <div class="conteneur">
+        <p class="section__num">03 — Position des mains</p>
+        <h2 class="section__titre">Bien placer ses <em>mains</em></h2>
+        <p class="section__intro">
+          Chaque doigt porte un numéro : le <strong>pouce = 1</strong>, jusqu’à l’<strong>auriculaire = 5</strong>.
+          La « position de Do » est la première à maîtriser : les cinq doigts reposent sur
+          Do, Ré, Mi, Fa, Sol.
+        </p>
+
+        <!-- Numérotation des doigts -->
+        <div class="doigts">
+          <div class="doigt"><span class="doigt__num">1</span><span class="doigt__nom">Pouce</span></div>
+          <div class="doigt"><span class="doigt__num">2</span><span class="doigt__nom">Index</span></div>
+          <div class="doigt"><span class="doigt__num">3</span><span class="doigt__nom">Majeur</span></div>
+          <div class="doigt"><span class="doigt__num">4</span><span class="doigt__nom">Annulaire</span></div>
+          <div class="doigt"><span class="doigt__num">5</span><span class="doigt__nom">Auriculaire</span></div>
+        </div>
+
+        <!-- Main droite -->
+        <article class="position">
+          <div class="position__visuel">
+            <img src="images/main-droite.jpg" alt="Main droite en position de Do sur le clavier de piano, doigts courbés" loading="lazy">
+            <span class="position__badge">Main droite</span>
+          </div>
+          <div class="position__texte">
+            <p class="position__sur-titre">Position de Do · Main droite</p>
+            <h3>Du pouce à l’auriculaire, de gauche à droite</h3>
+            <p>
+              Placez votre main droite au centre du clavier : le <strong>pouce (1)</strong> sur le <strong>Do médian</strong>,
+              puis chaque doigt sur la touche suivante. Les doigts sont légèrement courbés,
+              le poignet souple et détendu, à la hauteur du clavier.
+            </p>
+            <ol class="position__liste">
+              <li><strong>Pouce (1)</strong> — Do</li>
+              <li><strong>Index (2)</strong> — Ré</li>
+              <li><strong>Majeur (3)</strong> — Mi</li>
+              <li><strong>Annulaire (4)</strong> — Fa</li>
+              <li><strong>Auriculaire (5)</strong> — Sol</li>
+            </ol>
+            <div class="mini-clavier mini-clavier--large" aria-hidden="true">
+              <div class="mini-touche blanche on">1</div><div class="mini-touche blanche on">2</div><div class="mini-touche blanche on">3</div>
+              <div class="mini-touche blanche on">4</div><div class="mini-touche blanche on">5</div><div class="mini-touche blanche"></div><div class="mini-touche blanche"></div>
+              <div class="mini-touche noire" style="--pos:.62"></div><div class="mini-touche noire" style="--pos:1.74"></div>
+              <div class="mini-touche noire" style="--pos:3.62"></div><div class="mini-touche noire" style="--pos:4.74"></div><div class="mini-touche noire" style="--pos:5.86"></div>
+            </div>
+          </div>
+        </article>
+
+        <!-- Main gauche -->
+        <article class="position position--inverse">
+          <div class="position__visuel">
+            <img src="images/main-gauche.jpg" alt="Main gauche en position de Do sur le clavier de piano, doigts courbés" loading="lazy">
+            <span class="position__badge">Main gauche</span>
+          </div>
+          <div class="position__texte">
+            <p class="position__sur-titre">Position de Do · Main gauche</p>
+            <h3>Le miroir de la main droite</h3>
+            <p>
+              Pour la main gauche, c’est l’inverse : l’<strong>auriculaire (5)</strong> se pose sur le <strong>Do</strong>
+              situé une octave en dessous du Do médian, et le <strong>pouce (1)</strong> arrive sur le Sol.
+              Les doigts restent courbés, les épaules relâchées.
+            </p>
+            <ol class="position__liste">
+              <li><strong>Auriculaire (5)</strong> — Do</li>
+              <li><strong>Annulaire (4)</strong> — Ré</li>
+              <li><strong>Majeur (3)</strong> — Mi</li>
+              <li><strong>Index (2)</strong> — Fa</li>
+              <li><strong>Pouce (1)</strong> — Sol</li>
+            </ol>
+            <div class="mini-clavier mini-clavier--large" aria-hidden="true">
+              <div class="mini-touche blanche on">5</div><div class="mini-touche blanche on">4</div><div class="mini-touche blanche on">3</div>
+              <div class="mini-touche blanche on">2</div><div class="mini-touche blanche on">1</div><div class="mini-touche blanche"></div><div class="mini-touche blanche"></div>
+              <div class="mini-touche noire" style="--pos:.62"></div><div class="mini-touche noire" style="--pos:1.74"></div>
+              <div class="mini-touche noire" style="--pos:3.62"></div><div class="mini-touche noire" style="--pos:4.74"></div><div class="mini-touche noire" style="--pos:5.86"></div>
+            </div>
+          </div>
+        </article>
+
+        <!-- Posture -->
+        <div class="posture">
+          <h3 class="posture__titre">La bonne posture en 4 points</h3>
+          <div class="posture__grille">
+            <div class="posture__carte">
+              <span class="posture__num">Ⅰ</span>
+              <h4>Doigts courbés</h4>
+              <p>Imaginez que vous tenez une petite balle : la main garde une forme ronde et naturelle.</p>
+            </div>
+            <div class="posture__carte">
+              <span class="posture__num">Ⅱ</span>
+              <h4>Poignet souple</h4>
+              <p>Le poignet reste aligné avec l’avant-bras, ni cassé vers le haut, ni affaissé.</p>
+            </div>
+            <div class="posture__carte">
+              <span class="posture__num">Ⅲ</span>
+              <h4>Assise juste</h4>
+              <p>Assez près du piano, les coudes légèrement devant le torse, les pieds posés au sol.</p>
+            </div>
+            <div class="posture__carte">
+              <span class="posture__num">Ⅳ</span>
+              <h4>Épaules relâchées</h4>
+              <p>Aucune tension : la force vient du poids du bras, pas de la raideur des épaules.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ══════════════ 04 · ACCORDS ══════════════ -->
+    <section class="section section--sombre" id="accords">
+      <div class="conteneur">
+        <p class="section__num">04 — Premiers accords</p>
+        <h2 class="section__titre">Trois notes, un <em>accord</em></h2>
+        <p class="section__intro">
+          Un accord majeur ou mineur se joue avec trois doigts : les doigts <strong>1 – 3 – 5</strong>
+          (pouce, majeur, auriculaire). Voici les six accords indispensables pour débuter.
+        </p>
+
+        <div class="grille-accords">
+
+          <article class="carte-accord">
+            <header class="carte-accord__entete">
+              <h3>Do majeur</h3><span class="carte-accord__symbole">C</span>
+            </header>
+            <p class="carte-accord__notes">Do · Mi · Sol</p>
+            <div class="mini-clavier mini-clavier--accord" data-freqs="261.63,329.63,392.0" role="button" tabindex="0" title="Écouter l’accord" aria-hidden="true">
+              <div class="mini-touche blanche on">1</div><div class="mini-touche blanche"></div><div class="mini-touche blanche on">3</div>
+              <div class="mini-touche blanche"></div><div class="mini-touche blanche on">5</div><div class="mini-touche blanche"></div><div class="mini-touche blanche"></div>
+              <div class="mini-touche blanche"></div><div class="mini-touche blanche"></div><div class="mini-touche blanche"></div>
+              <div class="mini-touche noire" style="--pos:.62"></div><div class="mini-touche noire" style="--pos:1.74"></div>
+              <div class="mini-touche noire" style="--pos:3.62"></div><div class="mini-touche noire" style="--pos:4.74"></div><div class="mini-touche noire" style="--pos:5.86"></div>
+              <div class="mini-touche noire" style="--pos:7.62"></div><div class="mini-touche noire" style="--pos:8.74"></div>
+            </div>
+            <p class="carte-accord__doigtes">Doigté main droite : <strong>1 – 3 – 5</strong> · <em class="ecoute-astuce">Cliquez sur le clavier pour écouter ♪</em></p>
+          </article>
+
+          <article class="carte-accord">
+            <header class="carte-accord__entete">
+              <h3>Ré mineur</h3><span class="carte-accord__symbole">Dm</span>
+            </header>
+            <p class="carte-accord__notes">Ré · Fa · La</p>
+            <div class="mini-clavier mini-clavier--accord" data-freqs="293.67,349.23,440.01" role="button" tabindex="0" title="Écouter l’accord" aria-hidden="true">
+              <div class="mini-touche blanche"></div><div class="mini-touche blanche on">1</div><div class="mini-touche blanche"></div>
+              <div class="mini-touche blanche on">3</div><div class="mini-touche blanche"></div><div class="mini-touche blanche on">5</div><div class="mini-touche blanche"></div>
+              <div class="mini-touche blanche"></div><div class="mini-touche blanche"></div><div class="mini-touche blanche"></div>
+              <div class="mini-touche noire" style="--pos:.62"></div><div class="mini-touche noire" style="--pos:1.74"></div>
+              <div class="mini-touche noire" style="--pos:3.62"></div><div class="mini-touche noire" style="--pos:4.74"></div><div class="mini-touche noire" style="--pos:5.86"></div>
+              <div class="mini-touche noire" style="--pos:7.62"></div><div class="mini-touche noire" style="--pos:8.74"></div>
+            </div>
+            <p class="carte-accord__doigtes">Doigté main droite : <strong>1 – 3 – 5</strong></p>
+          </article>
+
+          <article class="carte-accord">
+            <header class="carte-accord__entete">
+              <h3>Mi mineur</h3><span class="carte-accord__symbole">Em</span>
+            </header>
+            <p class="carte-accord__notes">Mi · Sol · Si</p>
+            <div class="mini-clavier mini-clavier--accord" data-freqs="329.63,392.0,493.89" role="button" tabindex="0" title="Écouter l’accord" aria-hidden="true">
+              <div class="mini-touche blanche"></div><div class="mini-touche blanche"></div><div class="mini-touche blanche on">1</div>
+              <div class="mini-touche blanche"></div><div class="mini-touche blanche on">3</div><div class="mini-touche blanche"></div><div class="mini-touche blanche on">5</div>
+              <div class="mini-touche blanche"></div><div class="mini-touche blanche"></div><div class="mini-touche blanche"></div>
+              <div class="mini-touche noire" style="--pos:.62"></div><div class="mini-touche noire" style="--pos:1.74"></div>
+              <div class="mini-touche noire" style="--pos:3.62"></div><div class="mini-touche noire" style="--pos:4.74"></div><div class="mini-touche noire" style="--pos:5.86"></div>
+              <div class="mini-touche noire" style="--pos:7.62"></div><div class="mini-touche noire" style="--pos:8.74"></div>
+            </div>
+            <p class="carte-accord__doigtes">Doigté main droite : <strong>1 – 3 – 5</strong></p>
+          </article>
+
+          <article class="carte-accord">
+            <header class="carte-accord__entete">
+              <h3>Fa majeur</h3><span class="carte-accord__symbole">F</span>
+            </header>
+            <p class="carte-accord__notes">Fa · La · Do</p>
+            <div class="mini-clavier mini-clavier--accord" data-freqs="349.23,440.01,523.26" role="button" tabindex="0" title="Écouter l’accord" aria-hidden="true">
+              <div class="mini-touche blanche"></div><div class="mini-touche blanche"></div><div class="mini-touche blanche"></div>
+              <div class="mini-touche blanche on">1</div><div class="mini-touche blanche"></div><div class="mini-touche blanche on">3</div><div class="mini-touche blanche"></div>
+              <div class="mini-touche blanche on">5</div><div class="mini-touche blanche"></div><div class="mini-touche blanche"></div>
+              <div class="mini-touche noire" style="--pos:.62"></div><div class="mini-touche noire" style="--pos:1.74"></div>
+              <div class="mini-touche noire" style="--pos:3.62"></div><div class="mini-touche noire" style="--pos:4.74"></div><div class="mini-touche noire" style="--pos:5.86"></div>
+              <div class="mini-touche noire" style="--pos:7.62"></div><div class="mini-touche noire" style="--pos:8.74"></div>
+            </div>
+            <p class="carte-accord__doigtes">Doigté main droite : <strong>1 – 3 – 5</strong></p>
+          </article>
+
+          <article class="carte-accord">
+            <header class="carte-accord__entete">
+              <h3>Sol majeur</h3><span class="carte-accord__symbole">G</span>
+            </header>
+            <p class="carte-accord__notes">Sol · Si · Ré</p>
+            <div class="mini-clavier mini-clavier--accord" data-freqs="392.0,493.89,587.34" role="button" tabindex="0" title="Écouter l’accord" aria-hidden="true">
+              <div class="mini-touche blanche"></div><div class="mini-touche blanche"></div><div class="mini-touche blanche"></div>
+              <div class="mini-touche blanche"></div><div class="mini-touche blanche on">1</div><div class="mini-touche blanche"></div><div class="mini-touche blanche on">3</div>
+              <div class="mini-touche blanche"></div><div class="mini-touche blanche on">5</div><div class="mini-touche blanche"></div>
+              <div class="mini-touche noire" style="--pos:.62"></div><div class="mini-touche noire" style="--pos:1.74"></div>
+              <div class="mini-touche noire" style="--pos:3.62"></div><div class="mini-touche noire" style="--pos:4.74"></div><div class="mini-touche noire" style="--pos:5.86"></div>
+              <div class="mini-touche noire" style="--pos:7.62"></div><div class="mini-touche noire" style="--pos:8.74"></div>
+            </div>
+            <p class="carte-accord__doigtes">Doigté main droite : <strong>1 – 3 – 5</strong></p>
+          </article>
+
+          <article class="carte-accord">
+            <header class="carte-accord__entete">
+              <h3>La mineur</h3><span class="carte-accord__symbole">Am</span>
+            </header>
+            <p class="carte-accord__notes">La · Do · Mi</p>
+            <div class="mini-clavier mini-clavier--accord" data-freqs="440.01,523.26,659.27" role="button" tabindex="0" title="Écouter l’accord" aria-hidden="true">
+              <div class="mini-touche blanche"></div><div class="mini-touche blanche"></div><div class="mini-touche blanche"></div>
+              <div class="mini-touche blanche"></div><div class="mini-touche blanche"></div><div class="mini-touche blanche on">1</div><div class="mini-touche blanche"></div>
+              <div class="mini-touche blanche on">3</div><div class="mini-touche blanche"></div><div class="mini-touche blanche on">5</div>
+              <div class="mini-touche noire" style="--pos:.62"></div><div class="mini-touche noire" style="--pos:1.74"></div>
+              <div class="mini-touche noire" style="--pos:3.62"></div><div class="mini-touche noire" style="--pos:4.74"></div><div class="mini-touche noire" style="--pos:5.86"></div>
+              <div class="mini-touche noire" style="--pos:7.62"></div><div class="mini-touche noire" style="--pos:8.74"></div>
+            </div>
+            <p class="carte-accord__doigtes">Doigté main droite : <strong>1 – 3 – 5</strong></p>
+          </article>
+
+        </div>
+
+        <!-- Progression -->
+        <div class="progression">
+          <div class="progression__visuel">
+            <img src="images/accords.jpg" alt="Deux mains jouant un accord sur un clavier de piano" loading="lazy">
+          </div>
+          <div class="progression__texte">
+            <p class="section__num">Entraînement</p>
+            <h3>La progression « 4 accords »</h3>
+            <p>
+              Cette enchaînement sert dans des centaines de chansons. Jouez chaque accord
+              <strong>une mesure</strong> avec la main droite (1-3-5), puis ajoutez la basse à la main gauche.
+            </p>
+            <div class="progression__suite">
+              <span class="pastille">La <em>Am</em></span>
+              <span class="fleche" aria-hidden="true">→</span>
+              <span class="pastille">Fa <em>F</em></span>
+              <span class="fleche" aria-hidden="true">→</span>
+              <span class="pastille">Do <em>C</em></span>
+              <span class="fleche" aria-hidden="true">→</span>
+              <span class="pastille">Sol <em>G</em></span>
+            </div>
+            <p class="progression__note">Conseil : jouez lentement, en comptant « 1 – 2 – 3 – 4 » à voix haute.</p>
+          </div>
+        </div>
+        <!-- ═══ Table complète des 24 accords ═══ -->
+        <div class="tableau-ref" id="tableau-accords">
+          <h3 class="tableau-ref__titre">Les 24 accords — table complète</h3>
+          <p class="tableau-ref__intro">
+            Un accord se construit à partir de sa <strong>tonique</strong> : on ajoute la tierce
+            (3ᵉ note) et la quinte (5ᵉ note). À majeur ou à mineur, la tierce change :
+            c’est elle qui donne la <strong>couleur</strong> de l’accord — joyeuse pour le majeur,
+            plus sombre pour le mineur.
+          </p>
+          <div class="tableau-ref__legende">
+            <span><b>Majeur</b>&nbsp;= tonique + 3 demi-tons + 4 demi-tons</span>
+            <span><b>Mineur</b>&nbsp;= tonique + 4 demi-tons + 3 demi-tons</span>
+            <span><b>♪</b>&nbsp;Cliquez sur un clavier pour écouter l’accord</span>
+          </div>
+          <div class="tableau-ref__debordement">
+            <table class="tableau">
+              <thead>
+                <tr>
+                  <th>Accord</th>
+                  <th>Symbole</th>
+                  <th>Notes</th>
+                  <th>Type</th>
+                  <th>Clavier</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td class="tableau__note">Do majeur</td>
+                  <td class="tableau__lettre">C</td>
+                  <td>Do · Mi · Sol</td>
+                  <td><span class="badge-type badge-type--majeur">majeur</span></td>
+                  <td><div class="mini-clavier mini-clavier--accord-complet" data-freqs="261.63,329.63,392.0" role="button" tabindex="0" title="Écouter do majeur" aria-hidden="true"><div class="mini-touche blanche on"></div><div class="mini-touche blanche"></div><div class="mini-touche blanche on"></div><div class="mini-touche blanche"></div><div class="mini-touche blanche on"></div><div class="mini-touche blanche"></div><div class="mini-touche blanche"></div><div class="mini-touche blanche"></div><div class="mini-touche blanche"></div><div class="mini-touche blanche"></div><div class="mini-touche blanche"></div><div class="mini-touche blanche"></div><div class="mini-touche noire" style="--pos:0.62"></div><div class="mini-touche noire" style="--pos:1.74"></div><div class="mini-touche noire" style="--pos:3.62"></div><div class="mini-touche noire" style="--pos:4.74"></div><div class="mini-touche noire" style="--pos:5.86"></div><div class="mini-touche noire" style="--pos:7.62"></div><div class="mini-touche noire" style="--pos:8.74"></div><div class="mini-touche noire" style="--pos:10.62"></div><div class="mini-touche noire" style="--pos:11.74"></div></div></td>
+                </tr>
+                <tr class="tableau__rangee--alteree">
+                  <td class="tableau__note">Do mineur</td>
+                  <td class="tableau__lettre">Cm</td>
+                  <td>Do · Mi♭ · Sol</td>
+                  <td><span class="badge-type badge-type--mineur">mineur</span></td>
+                  <td><div class="mini-clavier mini-clavier--accord-complet" data-freqs="261.63,311.13,392.0" role="button" tabindex="0" title="Écouter do mineur" aria-hidden="true"><div class="mini-touche blanche on"></div><div class="mini-touche blanche"></div><div class="mini-touche blanche"></div><div class="mini-touche blanche"></div><div class="mini-touche blanche on"></div><div class="mini-touche blanche"></div><div class="mini-touche blanche"></div><div class="mini-touche blanche"></div><div class="mini-touche blanche"></div><div class="mini-touche blanche"></div><div class="mini-touche blanche"></div><div class="mini-touche blanche"></div><div class="mini-touche noire" style="--pos:0.62"></div><div class="mini-touche noire on" style="--pos:1.74"></div><div class="mini-touche noire" style="--pos:3.62"></div><div class="mini-touche noire" style="--pos:4.74"></div><div class="mini-touche noire" style="--pos:5.86"></div><div class="mini-touche noire" style="--pos:7.62"></div><div class="mini-touche noire" style="--pos:8.74"></div><div class="mini-touche noire" style="--pos:10.62"></div><div class="mini-touche noire" style="--pos:11.74"></div></div></td>
+                </tr>
+                <tr>
+                  <td class="tableau__note">Ré♭ majeur</td>
+                  <td class="tableau__lettre">D♭</td>
+                  <td>Ré♭ · Fa · La♭</td>
+                  <td><span class="badge-type badge-type--majeur">majeur</span></td>
+                  <td><div class="mini-clavier mini-clavier--accord-complet" data-freqs="277.19,349.23,415.31" role="button" tabindex="0" title="Écouter ré♭ majeur" aria-hidden="true"><div class="mini-touche blanche"></div><div class="mini-touche blanche"></div><div class="mini-touche blanche"></div><div class="mini-touche blanche on"></div><div class="mini-touche blanche"></div><div class="mini-touche blanche"></div><div class="mini-touche blanche"></div><div class="mini-touche blanche"></div><div class="mini-touche blanche"></div><div class="mini-touche blanche"></div><div class="mini-touche blanche"></div><div class="mini-touche blanche"></div><div class="mini-touche noire on" style="--pos:0.62"></div><div class="mini-touche noire" style="--pos:1.74"></div><div class="mini-touche noire" style="--pos:3.62"></div><div class="mini-touche noire on" style="--pos:4.74"></div><div class="mini-touche noire" style="--pos:5.86"></div><div class="mini-touche noire" style="--pos:7.62"></div><div class="mini-touche noire" style="--pos:8.74"></div><div class="mini-touche noire" style="--pos:10.62"></div><div class="mini-touche noire" style="--pos:11.74"></div></div></td>
+                </tr>
+                <tr class="tableau__rangee--alteree">
+                  <td class="tableau__note">Do♯ mineur</td>
+                  <td class="tableau__lettre">C♯m</td>
+                  <td>Do♯ · Mi · Sol♯</td>
+                  <td><span class="badge-type badge-type--mineur">mineur</span></td>
+                  <td><div class="mini-clavier mini-clavier--accord-complet" data-freqs="277.19,329.63,415.31" role="button" tabindex="0" title="Écouter do♯ mineur" aria-hidden="true"><div class="mini-touche blanche"></div><div class="mini-touche blanche"></div><div class="mini-touche blanche on"></div><div class="mini-touche blanche"></div><div class="mini-touche blanche"></div><div class="mini-touche blanche"></div><div class="mini-touche blanche"></div><div class="mini-touche blanche"></div><div class="mini-touche blanche"></div><div class="mini-touche blanche"></div><div class="mini-touche blanche"></div><div class="mini-touche blanche"></div><div class="mini-touche noire on" style="--pos:0.62"></div><div class="mini-touche noire" style="--pos:1.74"></div><div class="mini-touche noire" style="--pos:3.62"></div><div class="mini-touche noire on" style="--pos:4.74"></div><div class="mini-touche noire" style="--pos:5.86"></div><div class="mini-touche noire" style="--pos:7.62"></div><div class="mini-touche noire" style="--pos:8.74"></div><div class="mini-touche noire" style="--pos:10.62"></div><div class="mini-touche noire" style="--pos:11.74"></div></div></td>
+                </tr>
+                <tr>
+                  <td class="tableau__note">Ré majeur</td>
+                  <td class="tableau__lettre">D</td>
+                  <td>Ré · Fa♯ · La</td>
+                  <td><span class="badge-type badge-type--majeur">majeur</span></td>
+                  <td><div class="mini-clavier mini-clavier--accord-complet" data-freqs="293.67,370.0,440.01" role="button" tabindex="0" title="Écouter ré majeur" aria-hidden="true"><div class="mini-touche blanche"></div><div class="mini-touche blanche on"></div><div class="mini-touche blanche"></div><div class="mini-touche blanche"></div><div class="mini-touche blanche"></div><div class="mini-touche blanche on"></div><div class="mini-touche blanche"></div><div class="mini-touche blanche"></div><div class="mini-touche blanche"></div><div class="mini-touche blanche"></div><div class="mini-touche blanche"></div><div class="mini-touche blanche"></div><div class="mini-touche noire" style="--pos:0.62"></div><div class="mini-touche noire" style="--pos:1.74"></div><div class="mini-touche noire on" style="--pos:3.62"></div><div class="mini-touche noire" style="--pos:4.74"></div><div class="mini-touche noire" style="--pos:5.86"></div><div class="mini-touche noire" style="--pos:7.62"></div><div class="mini-touche noire" style="--pos:8.74"></div><div class="mini-touche noire" style="--pos:10.62"></div><div class="mini-touche noire" style="--pos:11.74"></div></div></td>
+                </tr>
+                <tr class="tableau__rangee--alteree">
+                  <td class="tableau__note">Ré mineur</td>
+                  <td class="tableau__lettre">Dm</td>
+                  <td>Ré · Fa · La</td>
+                  <td><span class="badge-type badge-type--mineur">mineur</span></td>
+                  <td><div class="mini-clavier mini-clavier--accord-complet" data-freqs="293.67,349.23,440.01" role="button" tabindex="0" title="Écouter ré mineur" aria-hidden="true"><div class="mini-touche blanche"></div><div class="mini-touche blanche on"></div><div class="mini-touche blanche"></div><div class="mini-touche blanche on"></div><div class="mini-touche blanche"></div><div class="mini-touche blanche on"></div><div class="mini-touche blanche"></div><div class="mini-touche blanche"></div><div class="mini-touche blanche"></div><div class="mini-touche blanche"></div><div class="mini-touche blanche"></div><div class="mini-touche blanche"></div><div class="mini-touche noire" style="--pos:0.62"></div><div class="mini-touche noire" style="--pos:1.74"></div><div class="mini-touche noire" style="--pos:3.62"></div><div class="mini-touche noire" style="--pos:4.74"></div><div class="mini-touche noire" style="--pos:5.86"></div><div class="mini-touche noire" style="--pos:7.62"></div><div class="mini-touche noire" style="--pos:8.74"></div><div class="mini-touche noire" style="--pos:10.62"></div><div class="mini-touche noire" style="--pos:11.74"></div></div></td>
+                </tr>
+                <tr>
+                  <td class="tableau__note">Mi♭ majeur</td>
+                  <td class="tableau__lettre">E♭</td>
+                  <td>Mi♭ · Sol · Si♭</td>
+                  <td><span class="badge-type badge-type--majeur">majeur</span></td>
+                  <td><div class="mini-clavier mini-clavier--accord-complet" data-freqs="311.13,392.0,466.17" role="button" tabindex="0" title="Écouter mi♭ majeur" aria-hidden="true"><div class="mini-touche blanche"></div><div class="mini-touche blanche"></div><div class="mini-touche blanche"></div><div class="mini-touche blanche"></div><div class="mini-touche blanche on"></div><div class="mini-touche blanche"></div><div class="mini-touche blanche"></div><div class="mini-touche blanche"></div><div class="mini-touche blanche"></div><div class="mini-touche blanche"></div><div class="mini-touche blanche"></div><div class="mini-touche blanche"></div><div class="mini-touche noire" style="--pos:0.62"></div><div class="mini-touche noire on" style="--pos:1.74"></div><div class="mini-touche noire" style="--pos:3.62"></div><div class="mini-touche noire" style="--pos:4.74"></div><div class="mini-touche noire on" style="--pos:5.86"></div><div class="mini-touche noire" style="--pos:7.62"></div><div class="mini-touche noire" style="--pos:8.74"></div><div class="mini-touche noire" style="--pos:10.62"></div><div class="mini-touche noire" style="--pos:11.74"></div></div></td>
+                </tr>
+                <tr class="tableau__rangee--alteree">
+                  <td class="tableau__note">Mi♭ mineur</td>
+                  <td class="tableau__lettre">E♭m</td>
+                  <td>Mi♭ · Sol♭ · Si♭</td>
+                  <td><span class="badge-type badge-type--mineur">mineur</span></td>
+                  <td><div class="mini-clavier mini-clavier--accord-complet" data-freqs="311.13,370.0,466.17" role="button" tabindex="0" title="Écouter mi♭ mineur" aria-hidden="true"><div class="mini-touche blanche"></div><div class="mini-touche blanche"></div><div class="mini-touche blanche"></div><div class="mini-touche blanche"></div><div class="mini-touche blanche"></div><div class="mini-touche blanche"></div><div class="mini-touche blanche"></div><div class="mini-touche blanche"></div><div class="mini-touche blanche"></div><div class="mini-touche blanche"></div><div class="mini-touche blanche"></div><div class="mini-touche blanche"></div><div class="mini-touche noire" style="--pos:0.62"></div><div class="mini-touche noire on" style="--pos:1.74"></div><div class="mini-touche noire on" style="--pos:3.62"></div><div class="mini-touche noire" style="--pos:4.74"></div><div class="mini-touche noire on" style="--pos:5.86"></div><div class="mini-touche noire" style="--pos:7.62"></div><div class="mini-touche noire" style="--pos:8.74"></div><div class="mini-touche noire" style="--pos:10.62"></div><div class="mini-touche noire" style="--pos:11.74"></div></div></td>
+                </tr>
+                <tr>
+                  <td class="tableau__note">Mi majeur</td>
+                  <td class="tableau__lettre">E</td>
+                  <td>Mi · Sol♯ · Si</td>
+                  <td><span class="badge-type badge-type--majeur">majeur</span></td>
+                  <td><div class="mini-clavier mini-clavier--accord-complet" data-freqs="329.63,415.31,493.89" role="button" tabindex="0" title="Écouter mi majeur" aria-hidden="true"><div class="mini-touche blanche"></div><div class="mini-touche blanche"></div><div class="mini-touche blanche on"></div><div class="mini-touche blanche"></div><div class="mini-touche blanche"></div><div class="mini-touche blanche"></div><div class="mini-touche blanche on"></div><div class="mini-touche blanche"></div><div class="mini-touche blanche"></div><div class="mini-touche blanche"></div><div class="mini-touche blanche"></div><div class="mini-touche blanche"></div><div class="mini-touche noire" style="--pos:0.62"></div><div class="mini-touche noire" style="--pos:1.74"></div><div class="mini-touche noire" style="--pos:3.62"></div><div class="mini-touche noire on" style="--pos:4.74"></div><div class="mini-touche noire" style="--pos:5.86"></div><div class="mini-touche noire" style="--pos:7.62"></div><div class="mini-touche noire" style="--pos:8.74"></div><div class="mini-touche noire" style="--pos:10.62"></div><div class="mini-touche noire" style="--pos:11.74"></div></div></td>
+                </tr>
+                <tr class="tableau__rangee--alteree">
+                  <td class="tableau__note">Mi mineur</td>
+                  <td class="tableau__lettre">Em</td>
+                  <td>Mi · Sol · Si</td>
+                  <td><span class="badge-type badge-type--mineur">mineur</span></td>
+                  <td><div class="mini-clavier mini-clavier--accord-complet" data-freqs="329.63,392.0,493.89" role="button" tabindex="0" title="Écouter mi mineur" aria-hidden="true"><div class="mini-touche blanche"></div><div class="mini-touche blanche"></div><div class="mini-touche blanche on"></div><div class="mini-touche blanche"></div><div class="mini-touche blanche on"></div><div class="mini-touche blanche"></div><div class="mini-touche blanche on"></div><div class="mini-touche blanche"></div><div class="mini-touche blanche"></div><div class="mini-touche blanche"></div><div class="mini-touche blanche"></div><div class="mini-touche blanche"></div><div class="mini-touche noire" style="--pos:0.62"></div><div class="mini-touche noire" style="--pos:1.74"></div><div class="mini-touche noire" style="--pos:3.62"></div><div class="mini-touche noire" style="--pos:4.74"></div><div class="mini-touche noire" style="--pos:5.86"></div><div class="mini-touche noire" style="--pos:7.62"></div><div class="mini-touche noire" style="--pos:8.74"></div><div class="mini-touche noire" style="--pos:10.62"></div><div class="mini-touche noire" style="--pos:11.74"></div></div></td>
+                </tr>
+                <tr>
+                  <td class="tableau__note">Fa majeur</td>
+                  <td class="tableau__lettre">F</td>
+                  <td>Fa · La · Do</td>
+                  <td><span class="badge-type badge-type--majeur">majeur</span></td>
+                  <td><div class="mini-clavier mini-clavier--accord-complet" data-freqs="349.23,440.01,523.26" role="button" tabindex="0" title="Écouter fa majeur" aria-hidden="true"><div class="mini-touche blanche"></div><div class="mini-touche blanche"></div><div class="mini-touche blanche"></div><div class="mini-touche blanche on"></div><div class="mini-touche blanche"></div><div class="mini-touche blanche on"></div><div class="mini-touche blanche"></div><div class="mini-touche blanche on"></div><div class="mini-touche blanche"></div><div class="mini-touche blanche"></div><div class="mini-touche blanche"></div><div class="mini-touche blanche"></div><div class="mini-touche noire" style="--pos:0.62"></div><div class="mini-touche noire" style="--pos:1.74"></div><div class="mini-touche noire" style="--pos:3.62"></div><div class="mini-touche noire" style="--pos:4.74"></div><div class="mini-touche noire" style="--pos:5.86"></div><div class="mini-touche noire" style="--pos:7.62"></div><div class="mini-touche noire" style="--pos:8.74"></div><div class="mini-touche noire" style="--pos:10.62"></div><div class="mini-touche noire" style="--pos:11.74"></div></div></td>
+                </tr>
+                <tr class="tableau__rangee--alteree">
+                  <td class="tableau__note">Fa mineur</td>
+                  <td class="tableau__lettre">Fm</td>
+                  <td>Fa · La♭ · Do</td>
+                  <td><span class="badge-type badge-type--mineur">mineur</span></td>
+                  <td><div class="mini-clavier mini-clavier--accord-complet" data-freqs="349.23,415.31,523.26" role="button" tabindex="0" title="Écouter fa mineur" aria-hidden="true"><div class="mini-touche blanche"></div><div class="mini-touche blanche"></div><div class="mini-touche blanche"></div><div class="mini-touche blanche on"></div><div class="mini-touche blanche"></div><div class="mini-touche blanche"></div><div class="mini-touche blanche"></div><div class="mini-touche blanche on"></div><div class="mini-touche blanche"></div><div class="mini-touche blanche"></div><div class="mini-touche blanche"></div><div class="mini-touche blanche"></div><div class="mini-touche noire" style="--pos:0.62"></div><div class="mini-touche noire" style="--pos:1.74"></div><div class="mini-touche noire" style="--pos:3.62"></div><div class="mini-touche noire on" style="--pos:4.74"></div><div class="mini-touche noire" style="--pos:5.86"></div><div class="mini-touche noire" style="--pos:7.62"></div><div class="mini-touche noire" style="--pos:8.74"></div><div class="mini-touche noire" style="--pos:10.62"></div><div class="mini-touche noire" style="--pos:11.74"></div></div></td>
+                </tr>
+                <tr>
+                  <td class="tableau__note">Fa♯ majeur</td>
+                  <td class="tableau__lettre">F♯</td>
+                  <td>Fa♯ · La♯ · Do♯</td>
+                  <td><span class="badge-type badge-type--majeur">majeur</span></td>
+                  <td><div class="mini-clavier mini-clavier--accord-complet" data-freqs="370.0,466.17,554.37" role="button" tabindex="0" title="Écouter fa♯ majeur" aria-hidden="true"><div class="mini-touche blanche"></div><div class="mini-touche blanche"></div><div class="mini-touche blanche"></div><div class="mini-touche blanche"></div><div class="mini-touche blanche"></div><div class="mini-touche blanche"></div><div class="mini-touche blanche"></div><div class="mini-touche blanche"></div><div class="mini-touche blanche"></div><div class="mini-touche blanche"></div><div class="mini-touche blanche"></div><div class="mini-touche blanche"></div><div class="mini-touche noire" style="--pos:0.62"></div><div class="mini-touche noire" style="--pos:1.74"></div><div class="mini-touche noire on" style="--pos:3.62"></div><div class="mini-touche noire" style="--pos:4.74"></div><div class="mini-touche noire on" style="--pos:5.86"></div><div class="mini-touche noire on" style="--pos:7.62"></div><div class="mini-touche noire" style="--pos:8.74"></div><div class="mini-touche noire" style="--pos:10.62"></div><div class="mini-touche noire" style="--pos:11.74"></div></div></td>
+                </tr>
+                <tr class="tableau__rangee--alteree">
+                  <td class="tableau__note">Fa♯ mineur</td>
+                  <td class="tableau__lettre">F♯m</td>
+                  <td>Fa♯ · La · Do♯</td>
+                  <td><span class="badge-type badge-type--mineur">mineur</span></td>
+                  <td><div class="mini-clavier mini-clavier--accord-complet" data-freqs="370.0,440.01,554.37" role="button" tabindex="0" title="Écouter fa♯ mineur" aria-hidden="true"><div class="mini-touche blanche"></div><div class="mini-touche blanche"></div><div class="mini-touche blanche"></div><div class="mini-touche blanche"></div><div class="mini-touche blanche"></div><div class="mini-touche blanche on"></div><div class="mini-touche blanche"></div><div class="mini-touche blanche"></div><div class="mini-touche blanche"></div><div class="mini-touche blanche"></div><div class="mini-touche blanche"></div><div class="mini-touche blanche"></div><div class="mini-touche noire" style="--pos:0.62"></div><div class="mini-touche noire" style="--pos:1.74"></div><div class="mini-touche noire on" style="--pos:3.62"></div><div class="mini-touche noire" style="--pos:4.74"></div><div class="mini-touche noire" style="--pos:5.86"></div><div class="mini-touche noire on" style="--pos:7.62"></div><div class="mini-touche noire" style="--pos:8.74"></div><div class="mini-touche noire" style="--pos:10.62"></div><div class="mini-touche noire" style="--pos:11.74"></div></div></td>
+                </tr>
+                <tr>
+                  <td class="tableau__note">Sol majeur</td>
+                  <td class="tableau__lettre">G</td>
+                  <td>Sol · Si · Ré</td>
+                  <td><span class="badge-type badge-type--majeur">majeur</span></td>
+                  <td><div class="mini-clavier mini-clavier--accord-complet" data-freqs="392.0,493.89,587.34" role="button" tabindex="0" title="Écouter sol majeur" aria-hidden="true"><div class="mini-touche blanche"></div><div class="mini-touche blanche"></div><div class="mini-touche blanche"></div><div class="mini-touche blanche"></div><div class="mini-touche blanche on"></div><div class="mini-touche blanche"></div><div class="mini-touche blanche on"></div><div class="mini-touche blanche"></div><div class="mini-touche blanche on"></div><div class="mini-touche blanche"></div><div class="mini-touche blanche"></div><div class="mini-touche blanche"></div><div class="mini-touche noire" style="--pos:0.62"></div><div class="mini-touche noire" style="--pos:1.74"></div><div class="mini-touche noire" style="--pos:3.62"></div><div class="mini-touche noire" style="--pos:4.74"></div><div class="mini-touche noire" style="--pos:5.86"></div><div class="mini-touche noire" style="--pos:7.62"></div><div class="mini-touche noire" style="--pos:8.74"></div><div class="mini-touche noire" style="--pos:10.62"></div><div class="mini-touche noire" style="--pos:11.74"></div></div></td>
+                </tr>
+                <tr class="tableau__rangee--alteree">
+                  <td class="tableau__note">Sol mineur</td>
+                  <td class="tableau__lettre">Gm</td>
+                  <td>Sol · Si♭ · Ré</td>
+                  <td><span class="badge-type badge-type--mineur">mineur</span></td>
+                  <td><div class="mini-clavier mini-clavier--accord-complet" data-freqs="392.0,466.17,587.34" role="button" tabindex="0" title="Écouter sol mineur" aria-hidden="true"><div class="mini-touche blanche"></div><div class="mini-touche blanche"></div><div class="mini-touche blanche"></div><div class="mini-touche blanche"></div><div class="mini-touche blanche on"></div><div class="mini-touche blanche"></div><div class="mini-touche blanche"></div><div class="mini-touche blanche"></div><div class="mini-touche blanche on"></div><div class="mini-touche blanche"></div><div class="mini-touche blanche"></div><div class="mini-touche blanche"></div><div class="mini-touche noire" style="--pos:0.62"></div><div class="mini-touche noire" style="--pos:1.74"></div><div class="mini-touche noire" style="--pos:3.62"></div><div class="mini-touche noire" style="--pos:4.74"></div><div class="mini-touche noire on" style="--pos:5.86"></div><div class="mini-touche noire" style="--pos:7.62"></div><div class="mini-touche noire" style="--pos:8.74"></div><div class="mini-touche noire" style="--pos:10.62"></div><div class="mini-touche noire" style="--pos:11.74"></div></div></td>
+                </tr>
+                <tr>
+                  <td class="tableau__note">La♭ majeur</td>
+                  <td class="tableau__lettre">A♭</td>
+                  <td>La♭ · Do · Mi♭</td>
+                  <td><span class="badge-type badge-type--majeur">majeur</span></td>
+                  <td><div class="mini-clavier mini-clavier--accord-complet" data-freqs="415.31,523.26,622.26" role="button" tabindex="0" title="Écouter la♭ majeur" aria-hidden="true"><div class="mini-touche blanche"></div><div class="mini-touche blanche"></div><div class="mini-touche blanche"></div><div class="mini-touche blanche"></div><div class="mini-touche blanche"></div><div class="mini-touche blanche"></div><div class="mini-touche blanche"></div><div class="mini-touche blanche on"></div><div class="mini-touche blanche"></div><div class="mini-touche blanche"></div><div class="mini-touche blanche"></div><div class="mini-touche blanche"></div><div class="mini-touche noire" style="--pos:0.62"></div><div class="mini-touche noire" style="--pos:1.74"></div><div class="mini-touche noire" style="--pos:3.62"></div><div class="mini-touche noire on" style="--pos:4.74"></div><div class="mini-touche noire" style="--pos:5.86"></div><div class="mini-touche noire" style="--pos:7.62"></div><div class="mini-touche noire on" style="--pos:8.74"></div><div class="mini-touche noire" style="--pos:10.62"></div><div class="mini-touche noire" style="--pos:11.74"></div></div></td>
+                </tr>
+                <tr class="tableau__rangee--alteree">
+                  <td class="tableau__note">Sol♯ mineur</td>
+                  <td class="tableau__lettre">G♯m</td>
+                  <td>Sol♯ · Si · Ré♯</td>
+                  <td><span class="badge-type badge-type--mineur">mineur</span></td>
+                  <td><div class="mini-clavier mini-clavier--accord-complet" data-freqs="415.31,493.89,622.26" role="button" tabindex="0" title="Écouter sol♯ mineur" aria-hidden="true"><div class="mini-touche blanche"></div><div class="mini-touche blanche"></div><div class="mini-touche blanche"></div><div class="mini-touche blanche"></div><div class="mini-touche blanche"></div><div class="mini-touche blanche"></div><div class="mini-touche blanche on"></div><div class="mini-touche blanche"></div><div class="mini-touche blanche"></div><div class="mini-touche blanche"></div><div class="mini-touche blanche"></div><div class="mini-touche blanche"></div><div class="mini-touche noire" style="--pos:0.62"></div><div class="mini-touche noire" style="--pos:1.74"></div><div class="mini-touche noire" style="--pos:3.62"></div><div class="mini-touche noire on" style="--pos:4.74"></div><div class="mini-touche noire" style="--pos:5.86"></div><div class="mini-touche noire" style="--pos:7.62"></div><div class="mini-touche noire on" style="--pos:8.74"></div><div class="mini-touche noire" style="--pos:10.62"></div><div class="mini-touche noire" style="--pos:11.74"></div></div></td>
+                </tr>
+                <tr>
+                  <td class="tableau__note">La majeur</td>
+                  <td class="tableau__lettre">A</td>
+                  <td>La · Do♯ · Mi</td>
+                  <td><span class="badge-type badge-type--majeur">majeur</span></td>
+                  <td><div class="mini-clavier mini-clavier--accord-complet" data-freqs="440.01,554.37,659.27" role="button" tabindex="0" title="Écouter la majeur" aria-hidden="true"><div class="mini-touche blanche"></div><div class="mini-touche blanche"></div><div class="mini-touche blanche"></div><div class="mini-touche blanche"></div><div class="mini-touche blanche"></div><div class="mini-touche blanche on"></div><div class="mini-touche blanche"></div><div class="mini-touche blanche"></div><div class="mini-touche blanche"></div><div class="mini-touche blanche on"></div><div class="mini-touche blanche"></div><div class="mini-touche blanche"></div><div class="mini-touche noire" style="--pos:0.62"></div><div class="mini-touche noire" style="--pos:1.74"></div><div class="mini-touche noire" style="--pos:3.62"></div><div class="mini-touche noire" style="--pos:4.74"></div><div class="mini-touche noire" style="--pos:5.86"></div><div class="mini-touche noire on" style="--pos:7.62"></div><div class="mini-touche noire" style="--pos:8.74"></div><div class="mini-touche noire" style="--pos:10.62"></div><div class="mini-touche noire" style="--pos:11.74"></div></div></td>
+                </tr>
+                <tr class="tableau__rangee--alteree">
+                  <td class="tableau__note">La mineur</td>
+                  <td class="tableau__lettre">Am</td>
+                  <td>La · Do · Mi</td>
+                  <td><span class="badge-type badge-type--mineur">mineur</span></td>
+                  <td><div class="mini-clavier mini-clavier--accord-complet" data-freqs="440.01,523.26,659.27" role="button" tabindex="0" title="Écouter la mineur" aria-hidden="true"><div class="mini-touche blanche"></div><div class="mini-touche blanche"></div><div class="mini-touche blanche"></div><div class="mini-touche blanche"></div><div class="mini-touche blanche"></div><div class="mini-touche blanche on"></div><div class="mini-touche blanche"></div><div class="mini-touche blanche on"></div><div class="mini-touche blanche"></div><div class="mini-touche blanche on"></div><div class="mini-touche blanche"></div><div class="mini-touche blanche"></div><div class="mini-touche noire" style="--pos:0.62"></div><div class="mini-touche noire" style="--pos:1.74"></div><div class="mini-touche noire" style="--pos:3.62"></div><div class="mini-touche noire" style="--pos:4.74"></div><div class="mini-touche noire" style="--pos:5.86"></div><div class="mini-touche noire" style="--pos:7.62"></div><div class="mini-touche noire" style="--pos:8.74"></div><div class="mini-touche noire" style="--pos:10.62"></div><div class="mini-touche noire" style="--pos:11.74"></div></div></td>
+                </tr>
+                <tr>
+                  <td class="tableau__note">Si♭ majeur</td>
+                  <td class="tableau__lettre">B♭</td>
+                  <td>Si♭ · Ré · Fa</td>
+                  <td><span class="badge-type badge-type--majeur">majeur</span></td>
+                  <td><div class="mini-clavier mini-clavier--accord-complet" data-freqs="466.17,587.34,698.47" role="button" tabindex="0" title="Écouter si♭ majeur" aria-hidden="true"><div class="mini-touche blanche"></div><div class="mini-touche blanche"></div><div class="mini-touche blanche"></div><div class="mini-touche blanche"></div><div class="mini-touche blanche"></div><div class="mini-touche blanche"></div><div class="mini-touche blanche"></div><div class="mini-touche blanche"></div><div class="mini-touche blanche on"></div><div class="mini-touche blanche"></div><div class="mini-touche blanche on"></div><div class="mini-touche blanche"></div><div class="mini-touche noire" style="--pos:0.62"></div><div class="mini-touche noire" style="--pos:1.74"></div><div class="mini-touche noire" style="--pos:3.62"></div><div class="mini-touche noire" style="--pos:4.74"></div><div class="mini-touche noire on" style="--pos:5.86"></div><div class="mini-touche noire" style="--pos:7.62"></div><div class="mini-touche noire" style="--pos:8.74"></div><div class="mini-touche noire" style="--pos:10.62"></div><div class="mini-touche noire" style="--pos:11.74"></div></div></td>
+                </tr>
+                <tr class="tableau__rangee--alteree">
+                  <td class="tableau__note">Si♭ mineur</td>
+                  <td class="tableau__lettre">B♭m</td>
+                  <td>Si♭ · Ré♭ · Fa</td>
+                  <td><span class="badge-type badge-type--mineur">mineur</span></td>
+                  <td><div class="mini-clavier mini-clavier--accord-complet" data-freqs="466.17,554.37,698.47" role="button" tabindex="0" title="Écouter si♭ mineur" aria-hidden="true"><div class="mini-touche blanche"></div><div class="mini-touche blanche"></div><div class="mini-touche blanche"></div><div class="mini-touche blanche"></div><div class="mini-touche blanche"></div><div class="mini-touche blanche"></div><div class="mini-touche blanche"></div><div class="mini-touche blanche"></div><div class="mini-touche blanche"></div><div class="mini-touche blanche"></div><div class="mini-touche blanche on"></div><div class="mini-touche blanche"></div><div class="mini-touche noire" style="--pos:0.62"></div><div class="mini-touche noire" style="--pos:1.74"></div><div class="mini-touche noire" style="--pos:3.62"></div><div class="mini-touche noire" style="--pos:4.74"></div><div class="mini-touche noire on" style="--pos:5.86"></div><div class="mini-touche noire on" style="--pos:7.62"></div><div class="mini-touche noire" style="--pos:8.74"></div><div class="mini-touche noire" style="--pos:10.62"></div><div class="mini-touche noire" style="--pos:11.74"></div></div></td>
+                </tr>
+                <tr>
+                  <td class="tableau__note">Si majeur</td>
+                  <td class="tableau__lettre">B</td>
+                  <td>Si · Ré♯ · Fa♯</td>
+                  <td><span class="badge-type badge-type--majeur">majeur</span></td>
+                  <td><div class="mini-clavier mini-clavier--accord-complet" data-freqs="493.89,622.26,740.0" role="button" tabindex="0" title="Écouter si majeur" aria-hidden="true"><div class="mini-touche blanche"></div><div class="mini-touche blanche"></div><div class="mini-touche blanche"></div><div class="mini-touche blanche"></div><div class="mini-touche blanche"></div><div class="mini-touche blanche"></div><div class="mini-touche blanche on"></div><div class="mini-touche blanche"></div><div class="mini-touche blanche"></div><div class="mini-touche blanche"></div><div class="mini-touche blanche"></div><div class="mini-touche blanche"></div><div class="mini-touche noire" style="--pos:0.62"></div><div class="mini-touche noire" style="--pos:1.74"></div><div class="mini-touche noire" style="--pos:3.62"></div><div class="mini-touche noire" style="--pos:4.74"></div><div class="mini-touche noire" style="--pos:5.86"></div><div class="mini-touche noire" style="--pos:7.62"></div><div class="mini-touche noire on" style="--pos:8.74"></div><div class="mini-touche noire on" style="--pos:10.62"></div><div class="mini-touche noire" style="--pos:11.74"></div></div></td>
+                </tr>
+                <tr class="tableau__rangee--alteree">
+                  <td class="tableau__note">Si mineur</td>
+                  <td class="tableau__lettre">Bm</td>
+                  <td>Si · Ré · Fa♯</td>
+                  <td><span class="badge-type badge-type--mineur">mineur</span></td>
+                  <td><div class="mini-clavier mini-clavier--accord-complet" data-freqs="493.89,587.34,740.0" role="button" tabindex="0" title="Écouter si mineur" aria-hidden="true"><div class="mini-touche blanche"></div><div class="mini-touche blanche"></div><div class="mini-touche blanche"></div><div class="mini-touche blanche"></div><div class="mini-touche blanche"></div><div class="mini-touche blanche"></div><div class="mini-touche blanche on"></div><div class="mini-touche blanche"></div><div class="mini-touche blanche on"></div><div class="mini-touche blanche"></div><div class="mini-touche blanche"></div><div class="mini-touche blanche"></div><div class="mini-touche noire" style="--pos:0.62"></div><div class="mini-touche noire" style="--pos:1.74"></div><div class="mini-touche noire" style="--pos:3.62"></div><div class="mini-touche noire" style="--pos:4.74"></div><div class="mini-touche noire" style="--pos:5.86"></div><div class="mini-touche noire" style="--pos:7.62"></div><div class="mini-touche noire" style="--pos:8.74"></div><div class="mini-touche noire on" style="--pos:10.62"></div><div class="mini-touche noire" style="--pos:11.74"></div></div></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="demi-tons">
+            <div class="demi-tons__icone" aria-hidden="true">♭</div>
+            <div>
+              <h4>Le même accord, deux orthographes</h4>
+              <p>
+                Les touches noires portent deux noms : <strong>Ré♭ majeur</strong> et <strong>Do♯ majeur</strong>
+                désignent par exemple les mêmes touches. Ici, nous utilisons l’orthographe la plus
+                courante pour chaque accord (Ré♭, Mi♭, La♭, Si♭ d’un côté — Do♯, Fa♯, Sol♯ de l’autre).
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ══════════════ 05 · LES GAMMES ══════════════ -->
+    <section class="section" id="gammes">
+      <div class="conteneur">
+        <p class="section__num">05 — Les gammes</p>
+        <h2 class="section__titre">Les 24 gammes, de Do à <em>Sol♭</em></h2>
+        <p class="section__intro">
+          Une gamme est une suite ordonnée de 7 notes. La <strong>gamme majeure</strong> sonne
+          lumineuse ; sa jumelle, la <strong>gamme mineure naturelle</strong>, sonne plus introspective.
+          Les deux partagent exactement les mêmes notes : ce sont des <strong>tonalités relatives</strong>.
+        </p>
+
+        <div class="gammes-structures">
+          <article class="structure-carte">
+            <p class="structure-carte__sur">Le schéma majeur</p>
+            <h3>Gamme majeure</h3>
+            <p class="structure-carte__formule">Ton · Ton · Demi · Ton · Ton · Ton · Demi</p>
+            <p>Exemple avec <strong>Do majeur</strong> : Do Ré Mi Fa Sol La Si — aucun dièse ni bémol.</p>
+          </article>
+          <article class="structure-carte">
+            <p class="structure-carte__sur">Le schéma mineur</p>
+            <h3>Gamme mineure naturelle</h3>
+            <p class="structure-carte__formule">Ton · Demi · Ton · Ton · Demi · Ton · Ton</p>
+            <p>Exemple avec <strong>La mineur</strong> : La Si Do Ré Mi Fa Sol — les mêmes touches que Do majeur.</p>
+          </article>
+          <article class="structure-carte">
+            <p class="structure-carte__sur">Le lien secret</p>
+            <h3>Tonalités relatives</h3>
+            <p class="structure-carte__formule">Do majeur ↔ La mineur</p>
+            <p>Chaque gamme majeure a une <strong>relative mineure</strong> qui démarre 3 demi-tons plus bas. Elles partagent la même armure (les mêmes dièses et bémols).</p>
+          </article>
+        </div>
+
+        <div class="tableau-cadre">
+          <h3 class="tableau-cadre__titre">Table des 24 gammes — 12 tonalités et leurs relatives</h3>
+          <div class="tableau-ref__debordement">
+            <table class="tableau tableau--clair">
+              <thead>
+                <tr>
+                  <th>Gamme majeure</th>
+                  <th>Notes</th>
+                  <th>Relative mineure</th>
+                  <th>Notes</th>
+                  <th>Armure</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td class="tableau__note">Do majeur</td>
+                  <td>Do · Ré · Mi · Fa · Sol · La · Si</td>
+                  <td class="tableau__note tableau__note--rel">La mineur</td>
+                  <td>La · Si · Do · Ré · Mi · Fa · Sol</td>
+                  <td class="tableau__armure">Aucun</td>
+                </tr>
+                <tr>
+                  <td class="tableau__note">Sol majeur</td>
+                  <td>Sol · La · Si · Do · Ré · Mi · Fa♯</td>
+                  <td class="tableau__note tableau__note--rel">Mi mineur</td>
+                  <td>Mi · Fa♯ · Sol · La · Si · Do · Ré</td>
+                  <td class="tableau__armure">1 dièse : Fa♯</td>
+                </tr>
+                <tr>
+                  <td class="tableau__note">Ré majeur</td>
+                  <td>Ré · Mi · Fa♯ · Sol · La · Si · Do♯</td>
+                  <td class="tableau__note tableau__note--rel">Si mineur</td>
+                  <td>Si · Do♯ · Ré · Mi · Fa♯ · Sol · La</td>
+                  <td class="tableau__armure">2 dièses : Fa♯, Do♯</td>
+                </tr>
+                <tr>
+                  <td class="tableau__note">La majeur</td>
+                  <td>La · Si · Do♯ · Ré · Mi · Fa♯ · Sol♯</td>
+                  <td class="tableau__note tableau__note--rel">Fa♯ mineur</td>
+                  <td>Fa♯ · Sol♯ · La · Si · Do♯ · Ré · Mi</td>
+                  <td class="tableau__armure">3 dièses : Fa♯, Do♯, Sol♯</td>
+                </tr>
+                <tr>
+                  <td class="tableau__note">Mi majeur</td>
+                  <td>Mi · Fa♯ · Sol♯ · La · Si · Do♯ · Ré♯</td>
+                  <td class="tableau__note tableau__note--rel">Do♯ mineur</td>
+                  <td>Do♯ · Ré♯ · Mi · Fa♯ · Sol♯ · La · Si</td>
+                  <td class="tableau__armure">4 dièses : Fa♯, Do♯, Sol♯, Ré♯</td>
+                </tr>
+                <tr>
+                  <td class="tableau__note">Si majeur</td>
+                  <td>Si · Do♯ · Ré♯ · Mi · Fa♯ · Sol♯ · La♯</td>
+                  <td class="tableau__note tableau__note--rel">Sol♯ mineur</td>
+                  <td>Sol♯ · La♯ · Si · Do♯ · Ré♯ · Mi · Fa♯</td>
+                  <td class="tableau__armure">5 dièses : Fa♯, Do♯, Sol♯, Ré♯, La♯</td>
+                </tr>
+                <tr>
+                  <td class="tableau__note">Fa majeur</td>
+                  <td>Fa · Sol · La · Si♭ · Do · Ré · Mi</td>
+                  <td class="tableau__note tableau__note--rel">Ré mineur</td>
+                  <td>Ré · Mi · Fa · Sol · La · Si♭ · Do</td>
+                  <td class="tableau__armure">1 bémol : Si♭</td>
+                </tr>
+                <tr>
+                  <td class="tableau__note">Si♭ majeur</td>
+                  <td>Si♭ · Do · Ré · Mi♭ · Fa · Sol · La</td>
+                  <td class="tableau__note tableau__note--rel">Sol mineur</td>
+                  <td>Sol · La · Si♭ · Do · Ré · Mi♭ · Fa</td>
+                  <td class="tableau__armure">2 bémols : Si♭, Mi♭</td>
+                </tr>
+                <tr>
+                  <td class="tableau__note">Mi♭ majeur</td>
+                  <td>Mi♭ · Fa · Sol · La♭ · Si♭ · Do · Ré</td>
+                  <td class="tableau__note tableau__note--rel">Do mineur</td>
+                  <td>Do · Ré · Mi♭ · Fa · Sol · La♭ · Si♭</td>
+                  <td class="tableau__armure">3 bémols : Si♭, Mi♭, La♭</td>
+                </tr>
+                <tr>
+                  <td class="tableau__note">La♭ majeur</td>
+                  <td>La♭ · Si♭ · Do · Ré♭ · Mi♭ · Fa · Sol</td>
+                  <td class="tableau__note tableau__note--rel">Fa mineur</td>
+                  <td>Fa · Sol · La♭ · Si♭ · Do · Ré♭ · Mi♭</td>
+                  <td class="tableau__armure">4 bémols : Si♭, Mi♭, La♭, Ré♭</td>
+                </tr>
+                <tr>
+                  <td class="tableau__note">Ré♭ majeur</td>
+                  <td>Ré♭ · Mi♭ · Fa · Sol♭ · La♭ · Si♭ · Do</td>
+                  <td class="tableau__note tableau__note--rel">Si♭ mineur</td>
+                  <td>Si♭ · Do · Ré♭ · Mi♭ · Fa · Sol♭ · La♭</td>
+                  <td class="tableau__armure">5 bémols : Si♭, Mi♭, La♭, Ré♭, Sol♭</td>
+                </tr>
+                <tr>
+                  <td class="tableau__note">Sol♭ majeur</td>
+                  <td>Sol♭ · La♭ · Si♭ · Do♭ · Ré♭ · Mi♭ · Fa</td>
+                  <td class="tableau__note tableau__note--rel">Mi♭ mineur</td>
+                  <td>Mi♭ · Fa · Sol♭ · La♭ · Si♭ · Do♭ · Ré♭</td>
+                  <td class="tableau__armure">6 bémols : Si♭, Mi♭, La♭, Ré♭, Sol♭, Do♭</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <p class="tableau-cadre__note">
+            L’<strong>armure</strong> indique les dièses ou bémols que comporte la tonalité :
+            plus on avance dans le cycle des quintes, plus elle s’enrichit.
+          </p>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ══════════════ 06 · S'ENTRAÎNER ══════════════ -->
+    <section class="section section--sombre" id="entrainement">
+      <div class="conteneur">
+        <p class="section__num">06 — S’entraîner</p>
+        <h2 class="section__titre">Quiz &amp; fiches à <em>imprimer</em></h2>
+        <p class="section__intro">
+          Testez votre œil avec le quiz des notes, puis imprimez les fiches mémo :
+          12 notes et 6 accords à découper et réviser partout, même loin du clavier.
+        </p>
+
+        <div class="quiz no-print" id="quiz">
+          <h3 class="quiz__titre">Quiz — reconnaître les notes</h3>
+          <p class="quiz__intro">Quelle note est surlignée sur le clavier ? Choisissez la bonne réponse, puis enchaînez.</p>
+          <div class="quiz__barre">
+            <p class="quiz__stat"><span id="quiz-score">0</span> bonne(s) réponse(s) sur <span id="quiz-total">0</span></p>
+            <label class="quiz__option">
+              <input type="checkbox" id="quiz-noires">
+              Inclure les touches noires
+            </label>
+          </div>
+          <div class="quiz__carte">
+            <div class="mini-clavier mini-clavier--quiz" id="quiz-clavier" aria-hidden="true"></div>
+            <p class="quiz__question">Quelle note est surlignée ?</p>
+            <div class="quiz__reponses" id="quiz-reponses"></div>
+            <p class="quiz__feedback" id="quiz-feedback" aria-live="polite"></p>
+            <button class="bouton bouton--or" id="quiz-suivant" type="button">Question suivante</button>
+          </div>
+        </div>
+
+        <div class="flashcards-entete">
+          <div>
+            <h3 class="flashcards-entete__titre">Fiches mémo à imprimer</h3>
+            <p class="flashcards-entete__texte">12 fiches de notes + 6 fiches d’accords — à découper et à emporter partout.</p>
+          </div>
+          <button class="bouton bouton--or no-print" id="btn-imprimer" type="button">Imprimer les fiches</button>
+        </div>
+
+        <div class="flashcards">
+          <article class="flashcard">
+            <div class="flashcard__tete">
+              <span class="flashcard__nom">Do</span>
+              <span class="flashcard__lettre">C</span>
+            </div>
+            <div class="mini-clavier mini-clavier--flash" aria-hidden="true"><div class="mini-touche blanche on"></div><div class="mini-touche blanche"></div><div class="mini-touche blanche"></div><div class="mini-touche blanche"></div><div class="mini-touche blanche"></div><div class="mini-touche blanche"></div><div class="mini-touche blanche"></div><div class="mini-touche noire" style="--pos:0.62"></div><div class="mini-touche noire" style="--pos:1.74"></div><div class="mini-touche noire" style="--pos:3.62"></div><div class="mini-touche noire" style="--pos:4.74"></div><div class="mini-touche noire" style="--pos:5.86"></div></div>
+            <p class="flashcard__indice">Avant les 2 touches noires</p>
+          </article>
+          <article class="flashcard">
+            <div class="flashcard__tete">
+              <span class="flashcard__nom">Do♯ / Ré♭</span>
+              <span class="flashcard__lettre">C♯/D♭</span>
+            </div>
+            <div class="mini-clavier mini-clavier--flash" aria-hidden="true"><div class="mini-touche blanche"></div><div class="mini-touche blanche"></div><div class="mini-touche blanche"></div><div class="mini-touche blanche"></div><div class="mini-touche blanche"></div><div class="mini-touche blanche"></div><div class="mini-touche blanche"></div><div class="mini-touche noire on" style="--pos:0.62"></div><div class="mini-touche noire" style="--pos:1.74"></div><div class="mini-touche noire" style="--pos:3.62"></div><div class="mini-touche noire" style="--pos:4.74"></div><div class="mini-touche noire" style="--pos:5.86"></div></div>
+            <p class="flashcard__indice">1ʳᵉ noire du groupe de 2</p>
+          </article>
+          <article class="flashcard">
+            <div class="flashcard__tete">
+              <span class="flashcard__nom">Ré</span>
+              <span class="flashcard__lettre">D</span>
+            </div>
+            <div class="mini-clavier mini-clavier--flash" aria-hidden="true"><div class="mini-touche blanche"></div><div class="mini-touche blanche on"></div><div class="mini-touche blanche"></div><div class="mini-touche blanche"></div><div class="mini-touche blanche"></div><div class="mini-touche blanche"></div><div class="mini-touche blanche"></div><div class="mini-touche noire" style="--pos:0.62"></div><div class="mini-touche noire" style="--pos:1.74"></div><div class="mini-touche noire" style="--pos:3.62"></div><div class="mini-touche noire" style="--pos:4.74"></div><div class="mini-touche noire" style="--pos:5.86"></div></div>
+            <p class="flashcard__indice">Entre les 2 touches noires</p>
+          </article>
+          <article class="flashcard">
+            <div class="flashcard__tete">
+              <span class="flashcard__nom">Ré♯ / Mi♭</span>
+              <span class="flashcard__lettre">D♯/E♭</span>
+            </div>
+            <div class="mini-clavier mini-clavier--flash" aria-hidden="true"><div class="mini-touche blanche"></div><div class="mini-touche blanche"></div><div class="mini-touche blanche"></div><div class="mini-touche blanche"></div><div class="mini-touche blanche"></div><div class="mini-touche blanche"></div><div class="mini-touche blanche"></div><div class="mini-touche noire" style="--pos:0.62"></div><div class="mini-touche noire on" style="--pos:1.74"></div><div class="mini-touche noire" style="--pos:3.62"></div><div class="mini-touche noire" style="--pos:4.74"></div><div class="mini-touche noire" style="--pos:5.86"></div></div>
+            <p class="flashcard__indice">2ᵉ noire du groupe de 2</p>
+          </article>
+          <article class="flashcard">
+            <div class="flashcard__tete">
+              <span class="flashcard__nom">Mi</span>
+              <span class="flashcard__lettre">E</span>
+            </div>
+            <div class="mini-clavier mini-clavier--flash" aria-hidden="true"><div class="mini-touche blanche"></div><div class="mini-touche blanche"></div><div class="mini-touche blanche on"></div><div class="mini-touche blanche"></div><div class="mini-touche blanche"></div><div class="mini-touche blanche"></div><div class="mini-touche blanche"></div><div class="mini-touche noire" style="--pos:0.62"></div><div class="mini-touche noire" style="--pos:1.74"></div><div class="mini-touche noire" style="--pos:3.62"></div><div class="mini-touche noire" style="--pos:4.74"></div><div class="mini-touche noire" style="--pos:5.86"></div></div>
+            <p class="flashcard__indice">Après les 2 touches noires</p>
+          </article>
+          <article class="flashcard">
+            <div class="flashcard__tete">
+              <span class="flashcard__nom">Fa</span>
+              <span class="flashcard__lettre">F</span>
+            </div>
+            <div class="mini-clavier mini-clavier--flash" aria-hidden="true"><div class="mini-touche blanche"></div><div class="mini-touche blanche"></div><div class="mini-touche blanche"></div><div class="mini-touche blanche on"></div><div class="mini-touche blanche"></div><div class="mini-touche blanche"></div><div class="mini-touche blanche"></div><div class="mini-touche noire" style="--pos:0.62"></div><div class="mini-touche noire" style="--pos:1.74"></div><div class="mini-touche noire" style="--pos:3.62"></div><div class="mini-touche noire" style="--pos:4.74"></div><div class="mini-touche noire" style="--pos:5.86"></div></div>
+            <p class="flashcard__indice">Avant les 3 touches noires</p>
+          </article>
+          <article class="flashcard">
+            <div class="flashcard__tete">
+              <span class="flashcard__nom">Fa♯ / Sol♭</span>
+              <span class="flashcard__lettre">F♯/G♭</span>
+            </div>
+            <div class="mini-clavier mini-clavier--flash" aria-hidden="true"><div class="mini-touche blanche"></div><div class="mini-touche blanche"></div><div class="mini-touche blanche"></div><div class="mini-touche blanche"></div><div class="mini-touche blanche"></div><div class="mini-touche blanche"></div><div class="mini-touche blanche"></div><div class="mini-touche noire" style="--pos:0.62"></div><div class="mini-touche noire" style="--pos:1.74"></div><div class="mini-touche noire on" style="--pos:3.62"></div><div class="mini-touche noire" style="--pos:4.74"></div><div class="mini-touche noire" style="--pos:5.86"></div></div>
+            <p class="flashcard__indice">1ʳᵉ noire du groupe de 3</p>
+          </article>
+          <article class="flashcard">
+            <div class="flashcard__tete">
+              <span class="flashcard__nom">Sol</span>
+              <span class="flashcard__lettre">G</span>
+            </div>
+            <div class="mini-clavier mini-clavier--flash" aria-hidden="true"><div class="mini-touche blanche"></div><div class="mini-touche blanche"></div><div class="mini-touche blanche"></div><div class="mini-touche blanche"></div><div class="mini-touche blanche on"></div><div class="mini-touche blanche"></div><div class="mini-touche blanche"></div><div class="mini-touche noire" style="--pos:0.62"></div><div class="mini-touche noire" style="--pos:1.74"></div><div class="mini-touche noire" style="--pos:3.62"></div><div class="mini-touche noire" style="--pos:4.74"></div><div class="mini-touche noire" style="--pos:5.86"></div></div>
+            <p class="flashcard__indice">Entre la 1ʳᵉ et la 2ᵉ noire</p>
+          </article>
+          <article class="flashcard">
+            <div class="flashcard__tete">
+              <span class="flashcard__nom">Sol♯ / La♭</span>
+              <span class="flashcard__lettre">G♯/A♭</span>
+            </div>
+            <div class="mini-clavier mini-clavier--flash" aria-hidden="true"><div class="mini-touche blanche"></div><div class="mini-touche blanche"></div><div class="mini-touche blanche"></div><div class="mini-touche blanche"></div><div class="mini-touche blanche"></div><div class="mini-touche blanche"></div><div class="mini-touche blanche"></div><div class="mini-touche noire" style="--pos:0.62"></div><div class="mini-touche noire" style="--pos:1.74"></div><div class="mini-touche noire" style="--pos:3.62"></div><div class="mini-touche noire on" style="--pos:4.74"></div><div class="mini-touche noire" style="--pos:5.86"></div></div>
+            <p class="flashcard__indice">2ᵉ noire du groupe de 3</p>
+          </article>
+          <article class="flashcard">
+            <div class="flashcard__tete">
+              <span class="flashcard__nom">La</span>
+              <span class="flashcard__lettre">A</span>
+            </div>
+            <div class="mini-clavier mini-clavier--flash" aria-hidden="true"><div class="mini-touche blanche"></div><div class="mini-touche blanche"></div><div class="mini-touche blanche"></div><div class="mini-touche blanche"></div><div class="mini-touche blanche"></div><div class="mini-touche blanche on"></div><div class="mini-touche blanche"></div><div class="mini-touche noire" style="--pos:0.62"></div><div class="mini-touche noire" style="--pos:1.74"></div><div class="mini-touche noire" style="--pos:3.62"></div><div class="mini-touche noire" style="--pos:4.74"></div><div class="mini-touche noire" style="--pos:5.86"></div></div>
+            <p class="flashcard__indice">Entre la 2ᵉ et la 3ᵉ noire</p>
+          </article>
+          <article class="flashcard">
+            <div class="flashcard__tete">
+              <span class="flashcard__nom">La♯ / Si♭</span>
+              <span class="flashcard__lettre">A♯/B♭</span>
+            </div>
+            <div class="mini-clavier mini-clavier--flash" aria-hidden="true"><div class="mini-touche blanche"></div><div class="mini-touche blanche"></div><div class="mini-touche blanche"></div><div class="mini-touche blanche"></div><div class="mini-touche blanche"></div><div class="mini-touche blanche"></div><div class="mini-touche blanche"></div><div class="mini-touche noire" style="--pos:0.62"></div><div class="mini-touche noire" style="--pos:1.74"></div><div class="mini-touche noire" style="--pos:3.62"></div><div class="mini-touche noire" style="--pos:4.74"></div><div class="mini-touche noire on" style="--pos:5.86"></div></div>
+            <p class="flashcard__indice">3ᵉ noire du groupe de 3</p>
+          </article>
+          <article class="flashcard">
+            <div class="flashcard__tete">
+              <span class="flashcard__nom">Si</span>
+              <span class="flashcard__lettre">B</span>
+            </div>
+            <div class="mini-clavier mini-clavier--flash" aria-hidden="true"><div class="mini-touche blanche"></div><div class="mini-touche blanche"></div><div class="mini-touche blanche"></div><div class="mini-touche blanche"></div><div class="mini-touche blanche"></div><div class="mini-touche blanche"></div><div class="mini-touche blanche on"></div><div class="mini-touche noire" style="--pos:0.62"></div><div class="mini-touche noire" style="--pos:1.74"></div><div class="mini-touche noire" style="--pos:3.62"></div><div class="mini-touche noire" style="--pos:4.74"></div><div class="mini-touche noire" style="--pos:5.86"></div></div>
+            <p class="flashcard__indice">Après les 3 touches noires</p>
+          </article>
+          <article class="flashcard flashcard--accord">
+            <div class="flashcard__tete">
+              <span class="flashcard__nom">Do majeur</span>
+              <span class="flashcard__lettre">C</span>
+            </div>
+            <p class="flashcard__notes">Do · Mi · Sol</p>
+            <div class="mini-clavier mini-clavier--accord mini-clavier--flash" data-freqs="261.63,329.63,392.0" role="button" tabindex="0" title="Écouter l’accord" aria-hidden="true"><div class="mini-touche blanche on"></div><div class="mini-touche blanche"></div><div class="mini-touche blanche on"></div><div class="mini-touche blanche"></div><div class="mini-touche blanche on"></div><div class="mini-touche blanche"></div><div class="mini-touche blanche"></div><div class="mini-touche blanche"></div><div class="mini-touche blanche"></div><div class="mini-touche blanche"></div><div class="mini-touche noire" style="--pos:0.62"></div><div class="mini-touche noire" style="--pos:1.74"></div><div class="mini-touche noire" style="--pos:3.62"></div><div class="mini-touche noire" style="--pos:4.74"></div><div class="mini-touche noire" style="--pos:5.86"></div><div class="mini-touche noire" style="--pos:7.62"></div><div class="mini-touche noire" style="--pos:8.74"></div></div>
+            <p class="flashcard__indice">Doigté : 1 – 3 – 5 · Cliquez pour écouter</p>
+          </article>
+          <article class="flashcard flashcard--accord">
+            <div class="flashcard__tete">
+              <span class="flashcard__nom">Ré mineur</span>
+              <span class="flashcard__lettre">Dm</span>
+            </div>
+            <p class="flashcard__notes">Ré · Fa · La</p>
+            <div class="mini-clavier mini-clavier--accord mini-clavier--flash" data-freqs="293.67,349.23,440.01" role="button" tabindex="0" title="Écouter l’accord" aria-hidden="true"><div class="mini-touche blanche"></div><div class="mini-touche blanche on"></div><div class="mini-touche blanche"></div><div class="mini-touche blanche on"></div><div class="mini-touche blanche"></div><div class="mini-touche blanche on"></div><div class="mini-touche blanche"></div><div class="mini-touche blanche"></div><div class="mini-touche blanche"></div><div class="mini-touche blanche"></div><div class="mini-touche noire" style="--pos:0.62"></div><div class="mini-touche noire" style="--pos:1.74"></div><div class="mini-touche noire" style="--pos:3.62"></div><div class="mini-touche noire" style="--pos:4.74"></div><div class="mini-touche noire" style="--pos:5.86"></div><div class="mini-touche noire" style="--pos:7.62"></div><div class="mini-touche noire" style="--pos:8.74"></div></div>
+            <p class="flashcard__indice">Doigté : 1 – 3 – 5 · Cliquez pour écouter</p>
+          </article>
+          <article class="flashcard flashcard--accord">
+            <div class="flashcard__tete">
+              <span class="flashcard__nom">Mi mineur</span>
+              <span class="flashcard__lettre">Em</span>
+            </div>
+            <p class="flashcard__notes">Mi · Sol · Si</p>
+            <div class="mini-clavier mini-clavier--accord mini-clavier--flash" data-freqs="329.63,392.0,493.89" role="button" tabindex="0" title="Écouter l’accord" aria-hidden="true"><div class="mini-touche blanche"></div><div class="mini-touche blanche"></div><div class="mini-touche blanche on"></div><div class="mini-touche blanche"></div><div class="mini-touche blanche on"></div><div class="mini-touche blanche"></div><div class="mini-touche blanche on"></div><div class="mini-touche blanche"></div><div class="mini-touche blanche"></div><div class="mini-touche blanche"></div><div class="mini-touche noire" style="--pos:0.62"></div><div class="mini-touche noire" style="--pos:1.74"></div><div class="mini-touche noire" style="--pos:3.62"></div><div class="mini-touche noire" style="--pos:4.74"></div><div class="mini-touche noire" style="--pos:5.86"></div><div class="mini-touche noire" style="--pos:7.62"></div><div class="mini-touche noire" style="--pos:8.74"></div></div>
+            <p class="flashcard__indice">Doigté : 1 – 3 – 5 · Cliquez pour écouter</p>
+          </article>
+          <article class="flashcard flashcard--accord">
+            <div class="flashcard__tete">
+              <span class="flashcard__nom">Fa majeur</span>
+              <span class="flashcard__lettre">F</span>
+            </div>
+            <p class="flashcard__notes">Fa · La · Do</p>
+            <div class="mini-clavier mini-clavier--accord mini-clavier--flash" data-freqs="349.23,440.01,523.26" role="button" tabindex="0" title="Écouter l’accord" aria-hidden="true"><div class="mini-touche blanche"></div><div class="mini-touche blanche"></div><div class="mini-touche blanche"></div><div class="mini-touche blanche on"></div><div class="mini-touche blanche"></div><div class="mini-touche blanche on"></div><div class="mini-touche blanche"></div><div class="mini-touche blanche on"></div><div class="mini-touche blanche"></div><div class="mini-touche blanche"></div><div class="mini-touche noire" style="--pos:0.62"></div><div class="mini-touche noire" style="--pos:1.74"></div><div class="mini-touche noire" style="--pos:3.62"></div><div class="mini-touche noire" style="--pos:4.74"></div><div class="mini-touche noire" style="--pos:5.86"></div><div class="mini-touche noire" style="--pos:7.62"></div><div class="mini-touche noire" style="--pos:8.74"></div></div>
+            <p class="flashcard__indice">Doigté : 1 – 3 – 5 · Cliquez pour écouter</p>
+          </article>
+          <article class="flashcard flashcard--accord">
+            <div class="flashcard__tete">
+              <span class="flashcard__nom">Sol majeur</span>
+              <span class="flashcard__lettre">G</span>
+            </div>
+            <p class="flashcard__notes">Sol · Si · Ré</p>
+            <div class="mini-clavier mini-clavier--accord mini-clavier--flash" data-freqs="392.0,493.89,587.34" role="button" tabindex="0" title="Écouter l’accord" aria-hidden="true"><div class="mini-touche blanche"></div><div class="mini-touche blanche"></div><div class="mini-touche blanche"></div><div class="mini-touche blanche"></div><div class="mini-touche blanche on"></div><div class="mini-touche blanche"></div><div class="mini-touche blanche on"></div><div class="mini-touche blanche"></div><div class="mini-touche blanche on"></div><div class="mini-touche blanche"></div><div class="mini-touche noire" style="--pos:0.62"></div><div class="mini-touche noire" style="--pos:1.74"></div><div class="mini-touche noire" style="--pos:3.62"></div><div class="mini-touche noire" style="--pos:4.74"></div><div class="mini-touche noire" style="--pos:5.86"></div><div class="mini-touche noire" style="--pos:7.62"></div><div class="mini-touche noire" style="--pos:8.74"></div></div>
+            <p class="flashcard__indice">Doigté : 1 – 3 – 5 · Cliquez pour écouter</p>
+          </article>
+          <article class="flashcard flashcard--accord">
+            <div class="flashcard__tete">
+              <span class="flashcard__nom">La mineur</span>
+              <span class="flashcard__lettre">Am</span>
+            </div>
+            <p class="flashcard__notes">La · Do · Mi</p>
+            <div class="mini-clavier mini-clavier--accord mini-clavier--flash" data-freqs="440.01,523.26,659.27" role="button" tabindex="0" title="Écouter l’accord" aria-hidden="true"><div class="mini-touche blanche"></div><div class="mini-touche blanche"></div><div class="mini-touche blanche"></div><div class="mini-touche blanche"></div><div class="mini-touche blanche"></div><div class="mini-touche blanche on"></div><div class="mini-touche blanche"></div><div class="mini-touche blanche on"></div><div class="mini-touche blanche"></div><div class="mini-touche blanche on"></div><div class="mini-touche noire" style="--pos:0.62"></div><div class="mini-touche noire" style="--pos:1.74"></div><div class="mini-touche noire" style="--pos:3.62"></div><div class="mini-touche noire" style="--pos:4.74"></div><div class="mini-touche noire" style="--pos:5.86"></div><div class="mini-touche noire" style="--pos:7.62"></div><div class="mini-touche noire" style="--pos:8.74"></div></div>
+            <p class="flashcard__indice">Doigté : 1 – 3 – 5 · Cliquez pour écouter</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ══════════════ 07 · HIRA — LA CHANSON ══════════════ -->
+    <section class="section" id="hira">
+      <div class="conteneur">
+        <p class="section__num">07 — Hira · Apprendre une chanson</p>
+        <h2 class="section__titre">Jouer <em>«&nbsp;Tsaroanay Tokoa Izao&nbsp;»</em></h2>
+        <p class="section__intro">
+          Passons à la pratique avec un hira malgache célèbre du recueil <strong>FFPM&nbsp;N°&nbsp;20</strong>.
+          En huit étapes, vous apprendrez à le jouer phrase par phrase — chaque touche s’allume
+          sur le clavier au rythme de la mélodie.
+        </p>
+
+        <!-- Fiche de la chanson -->
+        <div class="fiche-hira">
+          <div class="fiche-hira__tete">
+            <p class="fiche-hira__num">Hira N° 20 · FFPM</p>
+            <h3 class="fiche-hira__titre">Tsaroanay Tokoa Izao</h3>
+            <p class="fiche-hira__trad">≈ «&nbsp;Souvenons-nous de ces bienfaits, vraiment, dès maintenant&nbsp;»</p>
+          </div>
+          <dl class="fiche-hira__meta">
+            <div><dt>Tonalité</dt><dd>Fa majeur — «&nbsp;Do dia F&nbsp;»</dd></div>
+            <div><dt>Mesure</dt><dd>3/4 (trois temps)</dd></div>
+            <div><dt>Mètre</dt><dd>L.M. (Long Meter)</dd></div>
+            <div><dt>Mélodie</dt><dd>D.O. Jones (1880–1951)</dd></div>
+            <div><dt>Harmonie</dt><dd>R.H. Earnshaw</dd></div>
+            <div><dt>Source</dt><dd><a class="fiche-hira__lien" href="https://www.solfa.mg/media/tiona/ffpm/20.pdf" target="_blank" rel="noopener">Partition originale (PDF, solfa.mg) ↗</a></dd></div>
+          </dl>
+        </div>
+
+        <!-- Étape 1 -->
+        <article class="etape">
+          <p class="etape__num">Étape 1</p>
+          <h3 class="etape__titre">Comprendre la clé : «&nbsp;Do dia F&nbsp;»</h3>
+          <p>
+            La partition annonce <strong>«&nbsp;Do dia F&nbsp;»</strong> : le Do est placé sur <strong>Fa</strong>.
+            La chanson est donc en <strong>Fa majeur</strong>, et les lettres du solfège (d, r, m, f, s, l, t)
+            ne désignent <em>pas</em> les touches du même nom ! Voici le décalage à retenir.
+          </p>
+          <div class="tableau-cadre">
+            <div class="tableau-ref__debordement">
+              <table class="tableau tableau--clair tableau--compact">
+                <thead>
+                  <tr><th>Lettre (partition)</th><th>Se lit</th><th>Touche à jouer</th><th>Repère</th></tr>
+                </thead>
+                <tbody>
+                  <tr><td class="tableau__note">d</td><td>do</td><td class="tableau__lettre">Fa</td><td>la tonique, le centre de la chanson</td></tr>
+                  <tr><td class="tableau__note">r</td><td>ré</td><td class="tableau__lettre">Sol</td><td>la touche juste à droite de Fa</td></tr>
+                  <tr><td class="tableau__note">m</td><td>mi</td><td class="tableau__lettre">La</td><td>la touche blanche avant Si♭</td></tr>
+                  <tr><td class="tableau__note">f</td><td>fa</td><td class="tableau__lettre">Si♭</td><td>la touche <strong>noire</strong> (= La♯)</td></tr>
+                  <tr><td class="tableau__note">s</td><td>sol</td><td class="tableau__lettre">Do</td><td>avant les 2 touches noires</td></tr>
+                  <tr><td class="tableau__note">l</td><td>la</td><td class="tableau__lettre">Ré</td><td>entre les 2 touches noires</td></tr>
+                  <tr><td class="tableau__note">t,</td><td>si</td><td class="tableau__lettre">Mi</td><td>juste avant Fa (la note la plus grave)</td></tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </article>
+
+        <!-- Étape 2 -->
+        <article class="etape">
+          <p class="etape__num">Étape 2</p>
+          <h3 class="etape__titre">Placer la main droite</h3>
+          <p>
+            Posez les cinq doigts de la main droite sur <strong>Fa – Sol – La – Si♭ – Do</strong>
+            (doigts 1-2-3-4-5). Deux petits déplacements suffisent pour toute la chanson&nbsp;:
+            le <strong>pouce</strong> glisse sur <strong>Mi</strong> quand la mélodie descend (phrase 2),
+            et l’<strong>auriculaire</strong> s’étire jusqu’à <strong>Ré</strong> quand elle monte (phrase 3).
+          </p>
+          <div class="mini-clavier mini-clavier--hira-pos" aria-hidden="true"><div class="mini-touche blanche"></div><div class="mini-touche blanche"></div><div class="mini-touche blanche"></div><div class="mini-touche blanche on">>1</div><div class="mini-touche blanche on">>2</div><div class="mini-touche blanche on">>3</div><div class="mini-touche blanche"></div><div class="mini-touche blanche on">>5</div><div class="mini-touche blanche"></div><div class="mini-touche noire" style="--pos:0.62"></div><div class="mini-touche noire" style="--pos:1.74"></div><div class="mini-touche noire" style="--pos:3.62"></div><div class="mini-touche noire" style="--pos:4.74"></div><div class="mini-touche noire on" style="--pos:5.86">4</div><div class="mini-touche noire" style="--pos:7.62"></div></div>
+          <p class="etape__legende">Position de départ : 1=Fa · 2=Sol · 3=La · 4=Si♭ · 5=Do</p>
+        </article>
+
+        <!-- Atelier : phrases -->
+        <div class="hira-atelier">
+          <h3 class="hira-atelier__titre">Étapes 3 à 6 — phrase par phrase</h3>
+          <p class="hira-atelier__intro">
+            Cliquez sur «&nbsp;Écouter&nbsp;»&nbsp;: le clavier joue la phrase et allume chaque touche.
+            Essayez de rejouer derrière, puis passez à la phrase suivante.
+          </p>
+
+          <div class="piano-cadre">
+            <div class="piano" id="piano-hira">
+            <div class="touche touche--blanche" data-note="Do" data-lettre="C" data-freq="261.63"><span class="touche__nom">Do</span><span class="touche__lettre">C</span></div>
+            <div class="touche touche--blanche" data-note="Ré" data-lettre="D" data-freq="293.66"><span class="touche__nom">Ré</span><span class="touche__lettre">D</span></div>
+            <div class="touche touche--blanche" data-note="Mi" data-lettre="E" data-freq="329.63"><span class="touche__nom">Mi</span><span class="touche__lettre">E</span></div>
+            <div class="touche touche--blanche" data-note="Fa" data-lettre="F" data-freq="349.23"><span class="touche__nom">Fa</span><span class="touche__lettre">F</span></div>
+            <div class="touche touche--blanche" data-note="Sol" data-lettre="G" data-freq="392.00"><span class="touche__nom">Sol</span><span class="touche__lettre">G</span></div>
+            <div class="touche touche--blanche" data-note="La" data-lettre="A" data-freq="440.00"><span class="touche__nom">La</span><span class="touche__lettre">A</span></div>
+            <div class="touche touche--blanche" data-note="Si" data-lettre="B" data-freq="493.88"><span class="touche__nom">Si</span><span class="touche__lettre">B</span></div>
+            <div class="touche touche--blanche" data-note="Do" data-lettre="C" data-freq="523.25"><span class="touche__nom">Do</span><span class="touche__lettre">C</span></div>
+            <div class="touche touche--blanche" data-note="Ré" data-lettre="D" data-freq="587.33"><span class="touche__nom">Ré</span><span class="touche__lettre">D</span></div>
+            <div class="touche touche--blanche" data-note="Mi" data-lettre="E" data-freq="659.25"><span class="touche__nom">Mi</span><span class="touche__lettre">E</span></div>
+            <div class="touche touche--blanche" data-note="Fa" data-lettre="F" data-freq="698.46"><span class="touche__nom">Fa</span><span class="touche__lettre">F</span></div>
+            <div class="touche touche--blanche" data-note="Sol" data-lettre="G" data-freq="783.99"><span class="touche__nom">Sol</span><span class="touche__lettre">G</span></div>
+            <div class="touche touche--blanche" data-note="La" data-lettre="A" data-freq="880.00"><span class="touche__nom">La</span><span class="touche__lettre">A</span></div>
+            <div class="touche touche--blanche" data-note="Si" data-lettre="B" data-freq="987.77"><span class="touche__nom">Si</span><span class="touche__lettre">B</span></div>
+            <div class="touche touche--noire" style="--pos:0.62" data-note="Do♯" data-lettre="C#" data-freq="277.18"><span class="touche__nom">Do♯</span></div>
+            <div class="touche touche--noire" style="--pos:1.74" data-note="Ré♯" data-lettre="D#" data-freq="311.13"><span class="touche__nom">Ré♯</span></div>
+            <div class="touche touche--noire" style="--pos:3.62" data-note="Fa♯" data-lettre="F#" data-freq="369.99"><span class="touche__nom">Fa♯</span></div>
+            <div class="touche touche--noire" style="--pos:4.74" data-note="Sol♯" data-lettre="G#" data-freq="415.30"><span class="touche__nom">Sol♯</span></div>
+            <div class="touche touche--noire" style="--pos:5.86" data-note="La♯" data-lettre="A#" data-freq="466.16"><span class="touche__nom">La♯</span></div>
+            <div class="touche touche--noire" style="--pos:7.62" data-note="Do♯" data-lettre="C#" data-freq="554.37"><span class="touche__nom">Do♯</span></div>
+            <div class="touche touche--noire" style="--pos:8.74" data-note="Ré♯" data-lettre="D#" data-freq="622.25"><span class="touche__nom">Ré♯</span></div>
+            <div class="touche touche--noire" style="--pos:10.62" data-note="Fa♯" data-lettre="F#" data-freq="739.99"><span class="touche__nom">Fa♯</span></div>
+            <div class="touche touche--noire" style="--pos:11.74" data-note="Sol♯" data-lettre="G#" data-freq="830.61"><span class="touche__nom">Sol♯</span></div>
+            <div class="touche touche--noire" style="--pos:12.86" data-note="La♯" data-lettre="A#" data-freq="932.33"><span class="touche__nom">La♯</span></div>
+            </div>
+            <p class="piano-cadre__repere"><span></span> Les touches s’allument au fil de la mélodie — le Si♭ est la touche noire <strong>La♯</strong></p>
+          </div>
+
+          <div class="phrases">
+
+            <article class="phrase">
+              <div class="phrase__num">3</div>
+              <div class="phrase__corps">
+                <p class="phrase__paroles">«&nbsp;Tsa-ro-a-nay to-koa i-zao&nbsp;»</p>
+                <p class="phrase__ligne"><span class="phrase__etiq">Partition</span> m · m · m | m – m | s – f | m – – –</p>
+                <p class="phrase__ligne"><span class="phrase__etiq">Touches</span> <b>La</b> · <b>La</b> · <b>La</b> | <b>La</b> – <b>La</b> | <b>Do</b> – <b>Si♭</b> | <b>La</b> – – –</p>
+              </div>
+              <button class="bouton bouton--or bouton--ecoute" type="button" data-melodie="440.00:1,440.00:1,440.00:1,440.00:2,440.00:1,523.25:2,466.16:1,440.00:3">♪ Écouter</button>
+            </article>
+
+            <article class="phrase">
+              <div class="phrase__num">4</div>
+              <div class="phrase__corps">
+                <p class="phrase__paroles">«&nbsp;Ny so-a-be no-rai-si-nay&nbsp;»</p>
+                <p class="phrase__ligne"><span class="phrase__etiq">Partition</span> d · d · t, | d – · r · m | r – d | r – – –</p>
+                <p class="phrase__ligne"><span class="phrase__etiq">Touches</span> <b>Fa</b> · <b>Fa</b> · <b>Mi</b> | <b>Fa</b> (long) · <b>Sol</b> · <b>La</b> | <b>Sol</b> – <b>Fa</b> | <b>Sol</b> – – –</p>
+              </div>
+              <button class="bouton bouton--or bouton--ecoute" type="button" data-melodie="349.23:1,349.23:1,329.63:1,349.23:1.5,392.00:0.5,440.00:1,392.00:2,349.23:1,392.00:3">♪ Écouter</button>
+            </article>
+
+            <article class="phrase">
+              <div class="phrase__num">5</div>
+              <div class="phrase__corps">
+                <p class="phrase__paroles">«&nbsp;Tsy ta-pa-ka a-vy ta-mi-nao,&nbsp;»</p>
+                <p class="phrase__ligne"><span class="phrase__etiq">Partition</span> m · m · m | m – m | l – s | f – – –</p>
+                <p class="phrase__ligne"><span class="phrase__etiq">Touches</span> <b>La</b> · <b>La</b> · <b>La</b> | <b>La</b> – <b>La</b> | <b>Ré</b> – <b>Do</b> | <b>Si♭</b> – – –</p>
+              </div>
+              <button class="bouton bouton--or bouton--ecoute" type="button" data-melodie="440.00:1,440.00:1,440.00:1,440.00:2,440.00:1,587.33:2,523.25:1,466.16:3">♪ Écouter</button>
+            </article>
+
+            <article class="phrase">
+              <div class="phrase__num">6</div>
+              <div class="phrase__corps">
+                <p class="phrase__paroles">«&nbsp;Ry A-ndria-na-ha-ri-nay.&nbsp;»</p>
+                <p class="phrase__ligne"><span class="phrase__etiq">Partition</span> r · s · f | m – d | d – t, | d – – –</p>
+                <p class="phrase__ligne"><span class="phrase__etiq">Touches</span> <b>Sol</b> · <b>Do</b> · <b>Si♭</b> | <b>La</b> – <b>Fa</b> | <b>Fa</b> – <b>Mi</b> | <b>Fa</b> – – –</p>
+              </div>
+              <button class="bouton bouton--or bouton--ecoute" type="button" data-melodie="392.00:1,523.25:1,466.16:1,440.00:2,349.23:1,349.23:2,329.63:1,349.23:3">♪ Écouter</button>
+            </article>
+
+          </div>
+
+          <div class="hira-actions">
+            <button class="bouton bouton--or" type="button" data-melodie="440.00:1,440.00:1,440.00:1,440.00:2,440.00:1,523.25:2,466.16:1,440.00:3,349.23:1,349.23:1,329.63:1,349.23:1.5,392.00:0.5,440.00:1,392.00:2,349.23:1,392.00:3,440.00:1,440.00:1,440.00:1,440.00:2,440.00:1,587.33:2,523.25:1,466.16:3,392.00:1,523.25:1,466.16:1,440.00:2,349.23:1,349.23:2,329.63:1,349.23:3">♪ Écouter toute la mélodie</button>
+          </div>
+        </div>
+
+        <!-- Étape 7 -->
+        <article class="etape">
+          <p class="etape__num">Étape 7</p>
+          <h3 class="etape__titre">Enchaîner en chantant</h3>
+          <p>
+            Jouez les quatre phrases d’un seul trait, en chantant les paroles du premier couplet.
+            Commencez <strong>lentement</strong>, en comptant «&nbsp;1 – 2 – 3&nbsp;» pour chaque mesure,
+            puis accélérez progressivement.
+          </p>
+          <blockquote class="paroles-1">
+            <p>Tsaroanay tokoa izao,</p>
+            <p>ny soabe noraisinay&nbsp;;</p>
+            <p>tsy tapaka avy taminao,</p>
+            <p>Ry Andriananaharinay.</p>
+          </blockquote>
+        </article>
+
+        <!-- Étape 8 -->
+        <article class="etape">
+          <p class="etape__num">Étape 8</p>
+          <h3 class="etape__titre">Ajouter la main gauche <span class="etape__option">(facultatif)</span></h3>
+          <p>
+            Quand la main droite est à l’aise, posez la main gauche sur les <strong>basses</strong>&nbsp;:
+            une note longue par mesure. Écoutez d’abord la ligne de basse, puis essayez les deux mains ensemble.
+          </p>
+          <div class="basses">
+            <div class="basses__ligne"><span>Ph. 1</span><b>Fa</b><b>Fa</b><b>Do</b><b>Fa</b></div>
+            <div class="basses__ligne"><span>Ph. 2</span><b>Fa</b><b>Fa</b><b>Do</b><b>Do</b></div>
+            <div class="basses__ligne"><span>Ph. 3</span><b>Fa</b><b>Fa</b><b>Si♭</b><b>Si♭</b></div>
+            <div class="basses__ligne"><span>Ph. 4</span><b>Do</b><b>Fa</b><b>Do</b><b>Fa</b></div>
+          </div>
+          <button class="bouton bouton--or bouton--ecoute" type="button" data-melodie="174.61:3,174.61:3,130.81:3,174.61:3,174.61:3,174.61:3,130.81:3,130.81:3,174.61:3,174.61:3,233.08:3,233.08:3,130.81:3,174.61:3,130.81:3,174.61:3" data-sans-lumiere="1">♪ Écouter la ligne de basse</button>
+        </article>
+
+        <!-- Les couplets -->
+        <div class="couplets">
+          <h3 class="couplets__titre">Les 5 couplets du hira</h3>
+          <div class="couplets__grille">
+            <div class="couplet">
+              <p class="couplet__num">1</p>
+              <p>Tsaroanay tokoa izao,<br>ny soabe noraisinay&nbsp;;<br>tsy tapaka avy taminao,<br>Ry Andriananaharinay.</p>
+            </div>
+            <div class="couplet">
+              <p class="couplet__num">2</p>
+              <p>Ny lasa itodihana<br>dia mampiseho avokoa<br>ny tànana-pitiavana<br>miahy sady manasoa.</p>
+            </div>
+            <div class="couplet">
+              <p class="couplet__num">3</p>
+              <p>He! Koa ’ty andronay ity,<br>izay diavinay izao,<br>dia voahodidina ery<br>ny fitahiana Aminao.</p>
+            </div>
+            <div class="couplet">
+              <p class="couplet__num">4</p>
+              <p>Dia tokinay tokoa izay<br>fa mbola ho arovanao&nbsp;;<br>anio, ampitso, rahatrizay,<br>izay miankina aminao.</p>
+            </div>
+            <div class="couplet">
+              <p class="couplet__num">5</p>
+              <p>Ka dia mba velomy re<br>atỳ anatinay ny fo<br>hahay misaotra Anao anie,<br>Ry Rainay be famindram-po!</p>
+            </div>
+          </div>
+          <p class="couplets__source">Paroles et mélodie : recueil FFPM N° 20 — <a href="https://www.solfa.mg/media/tiona/ffpm/20.pdf" target="_blank" rel="noopener">voir la partition sur solfa.mg</a></p>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ══════════════ 08 · CONSEILS ══════════════ -->
+    <section class="section" id="conseils">
+      <div class="conteneur">
+        <p class="section__num">08 — Conseils de pratique</p>
+        <h2 class="section__titre">Progresser avec <em>régularité</em></h2>
+        <div class="grille-conseils">
+          <article class="conseil">
+            <span class="conseil__num">01</span>
+            <h3>15 minutes par jour</h3>
+            <p>Mieux vaut une courte séance quotidienne qu’une longue session hebdomadaire. La régularité crée les automatismes.</p>
+          </article>
+          <article class="conseil">
+            <span class="conseil__num">02</span>
+            <h3>Jouer lentement</h3>
+            <p>La vitesse est la conséquence de la précision. Travaillez d’abord très lentement, puis accélérez progressivement.</p>
+          </article>
+          <article class="conseil">
+            <span class="conseil__num">03</span>
+            <h3>Chanter les notes</h3>
+            <p>Chantez « Do, Ré, Mi… » en jouant : cela ancre l’oreille et accélère la mémorisation du clavier.</p>
+          </article>
+          <article class="conseil">
+            <span class="conseil__num">04</span>
+            <h3>Regarder ses mains</h3>
+            <p>Au début, gardez les yeux sur le clavier pour ancrer la position de Do. La lecture viendra ensuite.</p>
+          </article>
+          <article class="conseil">
+            <span class="conseil__num">05</span>
+            <h3>S’écouter</h3>
+            <p>Enregistrez-vous de temps en temps. Vous entendrez vos progrès — et les détails à corriger.</p>
+          </article>
+          <article class="conseil">
+            <span class="conseil__num">06</span>
+            <h3>S’amuser</h3>
+            <p>Terminez toujours par une petite mélodie que vous aimez. Le plaisir est le meilleur des professeurs.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ══════════════ PIED DE PAGE ══════════════ -->
+  <footer class="pied">
+    <div class="conteneur pied__grille">
+      <div>
+        <p class="pied__logo"><span class="nav__note">♪</span> Piano <em>Studio</em></p>
+        <p class="pied__texte">La méthode visuelle pour apprendre les notes de piano et la position des mains.</p>
+      </div>
+      <nav class="pied__nav" aria-label="Pied de page">
+        <a href="#clavier">Le clavier</a>
+        <a href="#notes">Les notes</a>
+        <a href="#mains">Position des mains</a>
+        <a href="#accords">Accords</a>
+        <a href="#gammes">Les gammes</a>
+        <a href="#entrainement">S’entraîner</a>
+        <a href="#hira">Hira</a>
+        <a href="#conseils">Conseils</a>
+      </nav>
+    </div>
+    <p class="pied__fin">© <span id="annee">2026</span> Piano Studio · Conçu avec ♪ pour les débutants</p>
+  </footer>
+
+  <script src="js/script.js"></script>
+</body>
+</html>
